@@ -1,0 +1,16 @@
+{
+  "name": "projectarcane",
+  "version": "1.0.0",
+  "description": "A personal secret project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Secret",
+    "DB"
+  ],
+  "author": "CyberRodeo",
+  "license": "ISC"
+}
