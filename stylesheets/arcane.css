@@ -41,6 +41,7 @@ body{
     color: rgba(255, 255, 255, .1);
     background-image: url('https://th.bing.com/th/id/R.6a5214701d977a406a9eb64b979a1921?rik=U2jwPghunkMGrg&riu=http%3a%2f%2f38.media.tumblr.com%2f3ef6ce978136be2a252c0ee333711168%2ftumblr_nesvhmYKbs1rquqsdo1_500.gif&ehk=SvonfgYnG0KnjkyLn24cZSBFablzBXp0VENX1pG0GlI%3d&risl=&pid=ImgRaw&r=0');
     -webkit-background-clip: text;
+    background-clip: text;
     font-weight: 400;
     background-position: center;
     font-family: 'source code pro';
