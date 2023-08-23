@@ -32,7 +32,7 @@ body{
 } */
 
 .alignedMiddle{
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
@@ -102,7 +102,77 @@ body{
 
 .landing{
     height: 100vh;
-    background: url(/public/videos/PrARcane.gif);
+    /* background: url(/public/videos/PrARcane.gif); */
+    /* background-image: url('https://miro.medium.com/max/552/1*Row2qPRNEwYe3VusMLCJnw.gif'); */
+    background-image: url('https://media1.tenor.com/images/c92e7ae5370317229846b5c6ffd243ad/tenor.gif?itemid=16952273');
     background-position: center;
     background-size: cover;
+}
+
+.p{
+    text-align: center;
+}
+
+.bigTxt{
+    font-size: 25px;
+}
+
+.descriptionP{
+    padding-top: 15px;
+}
+
+.landing-01{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: f;
+}
+
+.boxes{
+    justify-content: space-evenly;
+    display: flex;
+    /* padding-top: 100px; */
+    height: 70vh;
+    text-align: center;
+    align-items: center;
+}
+
+.box{
+    width: 25%;
+    border-radius: 5px;
+    background-color: black;
+    display: flex;
+    height: 50vh;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+.box-01{
+    background-image: url('');
+}
+
+.box-02{
+
+}
+
+.box-03{
+
+}
+
+.features{
+    display: flex;
+    height: 20vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.featureTxt{
+    font-weight: 400;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(255, 255, 255, .1);
+    background-image: url('https://th.bing.com/th/id/R.6a5214701d977a406a9eb64b979a1921?rik=U2jwPghunkMGrg&riu=http%3a%2f%2f38.media.tumblr.com%2f3ef6ce978136be2a252c0ee333711168%2ftumblr_nesvhmYKbs1rquqsdo1_500.gif&ehk=SvonfgYnG0KnjkyLn24cZSBFablzBXp0VENX1pG0GlI%3d&risl=&pid=ImgRaw&r=0');
+    font-size: 50px;
 }
