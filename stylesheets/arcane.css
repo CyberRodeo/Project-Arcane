@@ -133,7 +133,7 @@ body{
     display: flex;
     /* padding-top: 100px; */
     height: 70vh;
-    text-align: center;
+    /* text-align: center; */
     align-items: center;
 }
 
