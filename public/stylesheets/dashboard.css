@@ -8,3 +8,18 @@
 body{
     /* background-color: black; */
 }
+
+.logo{
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+}
+
+.anchorLogo{
+    width: 45px;
+    margin-right: 10px;
+}
+
+.arc{
+    font-size: 35px;
+}
