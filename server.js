@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 }); 
 
 app.get('/dashboard', (req, res) => {
-    res.send('Dashbord under development!');
+    res.render('dashboard')
 });
 
 app.listen(PORT || process.env.PORT, process.env.IP,  function(){

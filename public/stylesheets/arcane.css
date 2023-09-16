@@ -106,7 +106,8 @@ body{
     height: 100vh;
     /* background: url(/public/videos/PrARcane.gif); */
     /* background-image: url('https://miro.medium.com/max/552/1*Row2qPRNEwYe3VusMLCJnw.gif'); */
-    background-image: url('https://media1.tenor.com/images/c92e7ae5370317229846b5c6ffd243ad/tenor.gif?itemid=16952273');
+    /* background-image: url('https://media1.tenor.com/images/c92e7ae5370317229846b5c6ffd243ad/tenor.gif?itemid=16952273'); */
+    background-image: url('https://i.pinimg.com/originals/e1/91/a8/e191a896209c083e069cc0c99b8c003d.gif');
     background-position: center;
     background-size: cover;
 }
