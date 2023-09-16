@@ -69,7 +69,7 @@ body{
     padding: 10px;
     font-weight: 500;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 2px dashed white;
     transition: .25s;
     color: white;
     font-size: 13px;
@@ -82,6 +82,7 @@ body{
     color: rgb(0, 0, 0);
     transition: .25s;
     cursor: pointer;
+    border: 2px dashed black;
 }
 
 .icon{

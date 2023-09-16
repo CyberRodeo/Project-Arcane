@@ -4,15 +4,21 @@
     margin: 0;
     font-family: 'source code pro';
 }
-
+/* 
 body{
     /* background-color: black; */
+/* } */
+
+.header{
+    display: flex;
+    justify-content: center;
+    border-bottom: 4px solid black;
 }
 
 .logo{
     display: flex;
     /* flex-direction: column; */
-    width: 100%;
+    width: 60%;
 }
 
 .anchorLogo{
@@ -22,4 +28,45 @@ body{
 
 .arc{
     font-size: 35px;
+}
+
+.nav{
+    width: 90%;
+    justify-content: center;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.searchBox{
+    display: flex;
+    align-items: center;
+    border: 2px dashed black;
+    padding: 10px 10px;
+    border-radius: 25px;
+}
+
+.searchBox img{
+    width: 20px;
+    height: 20px;
+}
+
+.searchBox input{
+    outline: none;
+    /* border: 2px solid black; */
+    /* padding: 10px 10px; */
+    /* border-radius: 20px; */
+    border: none;
+    padding-left: 6px;
+}
+
+.link{
+    display: flex;
+}
+
+
+.link a{
+    margin-right: 25px;
+    text-decoration: none;
+    color: black;
 }
