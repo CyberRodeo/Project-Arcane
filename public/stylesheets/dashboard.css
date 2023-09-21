@@ -91,7 +91,7 @@ body{
     display: flex;
     height: 80vh;
 }
-.data-01{
+.data-01{ 
     width: 60%;
     border: 2px dashed rgb(159, 157, 157);
     border-radius: 10px;
