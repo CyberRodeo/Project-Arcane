@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const { chart } = import('chart.js');
 const PORT = 8000;
 
 
