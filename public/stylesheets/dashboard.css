@@ -143,8 +143,7 @@ body{
 
 .chartData{
     margin-top: 25px;
-    display: flex;
-    justify-content: space-evenly;
+    display: block;
 }
 
 #pinkLabel, #yellowLabel, #blueLabel{
