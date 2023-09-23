@@ -12,7 +12,7 @@ body{
 .header{
     display: flex;
     justify-content: center;
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid #878787;
 }
 
 .logo{
@@ -32,13 +32,14 @@ body{
 
 .nav{
     width: 90%;
-    justify-content: center;
-    padding: 15px 15px;
+    justify-content: space-between;
+    padding: 15px 0px;
     display: flex;
     align-items: center;
 }
 
 .searchBox{
+    /* width: 30%; */
     display: flex;
     align-items: center;
     border: 2px dashed black;
@@ -61,12 +62,13 @@ body{
 }
 
 .link{
+    width: 23%;
     display: flex;
 }
 
 
 .link a{
-    margin-right: 25px;
+    margin: 0px 19px;
     text-decoration: none;
     color: black;
 }
