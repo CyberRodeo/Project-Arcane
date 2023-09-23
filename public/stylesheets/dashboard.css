@@ -75,6 +75,7 @@ body{
 
 .content{
     display: flex;
+    background-color: #e9ebef;
     justify-content: center;
 }
 
@@ -82,11 +83,12 @@ body{
     width: 90%;
     margin-top: 2em;
     display: flex;
+    height: 90vh;
 } 
 
 .chart{
     width: 40%;
-    border: 2px dashed rgb(159, 157, 157);
+    border: 2px dashed #000d;
     margin-right: 1em;
     border-radius: 10px;
     justify-content: center;
@@ -95,7 +97,8 @@ body{
 }
 .data-01{ 
     width: 60%;
-    border: 2px dashed rgb(159, 157, 157);
+    height: 80vh;
+    border: 2px dashed #000d;
     border-radius: 10px;
     justify-content: center;
     display: flex;
@@ -125,9 +128,12 @@ body{
 }
 
 .chart{
-    display: block;
+    display: flex;
     padding: 50px;
     text-align: justify;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 75px;
 }
 
 .chartContainer{
@@ -146,11 +152,12 @@ body{
     height: 20px;
     /* background-color: black; */
     margin-right: 15px;
-    /* display: flex; */
+    display: flex !important;
 }
 
 #pink, #yellow, #blue{
-    display: flex;
+    display: flex !important;
+  
 }
 
 #pinkLabel{
@@ -163,4 +170,8 @@ body{
 
 #blueLabel{
     background-color: #ff6384;
+}
+
+.chart, .data-01{
+    background-color: #fff;
 }
