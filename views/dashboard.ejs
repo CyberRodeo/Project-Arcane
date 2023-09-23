@@ -1,14 +1,16 @@
 <%- include ("./partials/header") %>
+
     <head>
         <link rel="stylesheet" href="/stylesheets/dashboard.css">
         <title>Arcane | Dashboard</title>
     </head>
+
     <body>
         <div class="header">
             <div class="nav">
                 <div class="logo">
                     <img class="anchorLogo" src="/icons/anchor-white.png" alt="">
-                    <h1 class="arc" >Arcane</h1>
+                    <h1 class="arc">Arcane</h1>
                 </div>
                 <div class="link">
                     <a href="/">Home</a>
@@ -19,17 +21,38 @@
                     <img src="/icons/search.png" alt="">
                     <input type="text" placeholder="Search Arcane">
                 </div>
-                <img id="userPfp" src="https://yt3.ggpht.com/a/AATXAJyAjXWhg85XlBUBufDpYQ7zB7GIiIlg9js4_wCoFA=s900-c-k-c0xffffffff-no-rj-mo" alt="">
+                <img id="userPfp"
+                    src="https://yt3.ggpht.com/a/AATXAJyAjXWhg85XlBUBufDpYQ7zB7GIiIlg9js4_wCoFA=s900-c-k-c0xffffffff-no-rj-mo"
+                    alt="">
             </div>
         </div>
         <div class="content">
             <div class="content-01">
                 <div class="chart">
-                    <!-- <img src="https://th.bing.com/th/id/OIP.UcFmWuuhEuP2jGmg69aCgQAAAA?pid=ImgDet&rs=1" alt=""> -->
+                    <div class="chartContainer">
+                        <img id="pieChart" src="/images/pieChart0.png" alt="">
+                    </div>
+                    <div class="chartData">
+                        <div id="pink">
+                            <span id="pinkLabel"></span>
+                            Html
+                        </div>
+                        <!-- <div class="pinkColourFile">PDF</div> -->
+                        <div id="yellow">
+                            <span id="yellowLabel"></span>
+                            CSS
+                        </div>
+                        <!-- <div class="yellowColourFile">Html</div> -->
+                        <div id="blue">
+                            <span id="blueLabel"></span>
+                            JS
+                        </div>
+                        <!-- <div class="blueColourFile">JS</div> -->
+                    </div>
                 </div>
                 <div class="data-01">
                     <!-- <img src="https://hips.hearstapps.com/hmg-prod/images/2019-porsche-911-gt3-rs-1545239515.jpg" alt=""> -->
                 </div>
             </div>
         </div>
-<%- include ("./partials/footer") %>
+        <%- include ("./partials/footer") %>

@@ -117,3 +117,50 @@ body{
     padding: 1.5px;
     margin-left: 18px;
 }
+
+#pieChart{
+    width: 400px;
+    height: 400px;
+    /* margin-top: 50px; */
+}
+
+.chart{
+    display: block;
+    padding: 50px;
+    text-align: justify;
+}
+
+.chartContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.chartData{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#pinkLabel, #yellowLabel, #blueLabel{
+    width: 20px;
+    height: 20px;
+    /* background-color: black; */
+    margin-right: 15px;
+    /* display: flex; */
+}
+
+#pink, #yellow, #blue{
+    display: flex;
+}
+
+#pinkLabel{
+    background-color: #36a2eb;
+}
+
+#yellowLabel{
+    background-color: #ffcd56;
+}
+
+#blueLabel{
+    background-color: #ff6384;
+}
