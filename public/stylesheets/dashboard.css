@@ -199,6 +199,8 @@ body{
     width: 98%;
     justify-content: start;
     padding: 15px;
+    padding-bottom: 30px;
+    padding-top: 30px;
     border-right: none;
     border-left: none;
     /* border-radius: 10px; */
