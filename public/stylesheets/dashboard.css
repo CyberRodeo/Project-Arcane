@@ -195,7 +195,7 @@ body{
     /* height: 29% !important; */
     align-items: center;
     display: flex;
-    border: 2px solid #d8d8d8;
+    border: 1px solid #bababa;
     width: 98%;
     justify-content: start;
     padding: 15px;
