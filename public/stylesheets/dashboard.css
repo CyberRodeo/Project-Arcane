@@ -83,12 +83,11 @@ body{
     width: 90%;
     margin-top: 2em;
     display: flex;
-    height: 90vh;
 } 
 
 .chart{
-    width: 40%;
-    border: 2px dashed #000d;
+    width: 30%;
+    /* border: 2px dashed #000d; */
     margin-right: 1em;
     border-radius: 10px;
     justify-content: center;
@@ -96,7 +95,7 @@ body{
     height: 80vh;
 }
 .files_tabs{
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     margin-bottom: 5px;
     margin-top: 5px;
     /* overflow: scroll; */
@@ -111,9 +110,8 @@ body{
 }
 .data-01{
     /* overflow: scroll; */
-    width: 60%;
-    height: 80vh;
-    border: 2px dashed #000d;
+    width: 70%;
+    /* border: 2px dashed #000d; */
     border-radius: 10px;
     /* justify-content: center; */
     align-items: center;
@@ -150,7 +148,6 @@ body{
     text-align: justify;
     align-items: center;
     flex-direction: column;
-    padding-top: 75px;
 }
 
 .chartContainer{
@@ -189,27 +186,29 @@ body{
 }
 
 .chart, .data-01{
-    background-color: #fff;
+    /* background-color: #fff; */
     /* box-shadow: 0px 6px 20px .5px #; */
 }
 
 .files{
-    margin-top: 9px;
-    height: 54px;
+    margin-top: 10px;
+    /* height: 29% !important; */
     align-items: center;
     display: flex;
     border: 2px solid #d8d8d8;
     width: 98%;
     justify-content: start;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 0px 0px #a5a2a2;
-    transition: .25s;
+    padding: 15px;
+    border-right: none;
+    border-left: none;
+    /* border-radius: 10px; */
+    /* box-shadow: 0px 0px 0px 0px #a5a2a2; */
+    /* transition: .25s; */
 }
 
 .files:hover{
-    box-shadow: 0px 6px 20px 0px #a5a2a2;
-    border: 2px solid #fff;
+    /* box-shadow: 0px 6px 20px 0px #a5a2a2;
+    border: 2px solid #fff; */
 }
 
 .files_owner_pfp{
@@ -220,4 +219,36 @@ body{
     padding: 2px;
     object-fit: cover;
     margin-right: 10px;
+}
+
+.user_pfp img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 2px;
+}
+
+.user_pronouns h2{
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.user_name h1{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.user_aboutMe{
+    display: flex;
+    flex-direction: column;
+}
+
+.user_aboutMe button{
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid black;
 }
