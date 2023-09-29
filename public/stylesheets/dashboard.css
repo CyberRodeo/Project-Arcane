@@ -194,18 +194,39 @@ body{
     margin-top: 10px;
     /* height: 29% !important; */
     align-items: center;
-    display: flex;
+    /* display: flex; */
     border: 1px solid #bababa;
     width: 98%;
-    justify-content: start;
+    /* justify-content: center; */
+    align-items: start;
     padding: 15px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 35px;
+    padding-top: 35px;
     border-right: none;
     border-left: none;
+    /* display: flex; */
+    /* flex-direction: column; */
     /* border-radius: 10px; */
     /* box-shadow: 0px 0px 0px 0px #a5a2a2; */
     /* transition: .25s; */
+}
+
+.file_name{
+    font-weight: 400;
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: black;
+    text-decoration: none;
+    width: 100px;
+}
+
+.file_name:hover{
+    text-decoration: underline;
+}
+
+.files span{
+    color: rgb(115, 115, 115);
+    font-size: 16px;
 }
 
 .files:hover{
@@ -230,17 +251,17 @@ body{
     object-fit: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .user_pronouns h2{
     font-weight: 300;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .user_name h1{
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .user_aboutMe{
@@ -248,9 +269,44 @@ body{
     flex-direction: column;
 }
 
-.user_aboutMe button{
-    padding: 5px;
+.edit_profile{
+    padding: 6px;
     margin-top: 15px;
     border-radius: 6px;
     border: 1px solid black;
+    transition: .1s;
+}
+
+.edit_profile:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.user_file_upload_time{
+    font-weight: 400;
+    color: rgb(115, 115, 115);
+    /* margin-top: 10px; */
+}
+
+.upload_lstime{
+    text-decoration: none;
+    color: black;
+    font-style: 10px;
+    font-weight: 500;
+}
+
+.file_info{
+    display: flex;
+    margin-top: 14px;
+    align-items: center;
+}
+
+.upload_lstime:hover{
+    text-decoration: underline;
+}
+
+.favStar{
+    width: 15px;
+    height: 15px;
+    margin-right: 12px;
 }
