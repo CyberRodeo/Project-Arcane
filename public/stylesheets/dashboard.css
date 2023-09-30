@@ -217,7 +217,7 @@ body{
     margin-bottom: 5px;
     color: black;
     text-decoration: none;
-    width: 100px;
+    width: 80%;
 }
 
 .file_name:hover{
@@ -285,7 +285,7 @@ body{
 .user_file_upload_time{
     font-weight: 400;
     color: rgb(115, 115, 115);
-    /* margin-top: 10px; */
+    margin-top: 10px;
 }
 
 .upload_lstime{
@@ -314,6 +314,17 @@ body{
 .footer{
     display: flex;
     width: 90%;
-    margin-top: 15px;
-    
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-content: space-evenly;
+}
+
+.footerGod{
+    justify-content: center;
+    display: flex;
+}
+
+.footer_link{
+    color: black;
+    text-decoration: none;   
 }
