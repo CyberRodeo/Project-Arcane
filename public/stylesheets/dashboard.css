@@ -297,7 +297,7 @@ body{
 
 .file_info{
     display: flex;
-    margin-top: 14px;
+    margin-top: 14  px;
     align-items: center;
 }
 
@@ -309,4 +309,11 @@ body{
     width: 15px;
     height: 15px;
     margin-right: 12px;
+}
+
+.footer{
+    display: flex;
+    width: 90%;
+    margin-top: 15px;
+    
 }
