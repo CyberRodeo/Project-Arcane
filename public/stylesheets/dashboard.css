@@ -187,10 +187,6 @@ body{
     background-color: #ff6384;
 }
 
-.chart, .data-01{
-    /* background-color: #fff; */
-    /* box-shadow: 0px 6px 20px .5px #; */
-}
 
 .files{
     margin-top: 10px;
@@ -231,10 +227,7 @@ body{
     font-size: 16px;
 }
 
-.files:hover{
-    /* box-shadow: 0px 6px 20px 0px #a5a2a2;
-    border: 2px solid #fff; */
-}
+
 
 .files_owner_pfp{
     width: 25px;
