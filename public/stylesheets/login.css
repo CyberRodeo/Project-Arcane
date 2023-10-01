@@ -39,6 +39,7 @@
     padding-left: 10px;
     border: 1px solid;
     border-radius: 10px;
+    outline: none;
 }
 
 .login-icon{
@@ -81,4 +82,46 @@
     color: white;
     background-color: black;
     border-color: white;
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    width: 90%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    justify-content: space-evenly;
+}
+
+.footer_link{
+    display: flex;
+    align-items: center;
+}
+
+.footerGod{
+    justify-content: center;
+    display: flex;
+    background-color: #e9ebef;
+    width: 100%;
+    border-top: 1px solid #bababa;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer_link a{
+    color: black;
+    text-decoration: none;  
+    font-size: 13px; 
+}
+
+.footer_link a:hover{
+    text-decoration: underline;
+}
+
+.footer_logo{
+    width: 20px;
+    height: 20px; 
+    margin-right: 5px;
 }
