@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'source code pro';
+}
+
+.login-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form{
+    width: 30%;
+    text-align: center;
+    height: 70%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border: 2px dashed #000000;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.login-username-input, .login-pass-input{
+    width: 85%;
+}
+
+.login-username, .login-pass{
+    width: 95%;
+    /* height: 200%; */
+    /* padding: 12px; */
+    padding-top: 10px;
+    padding-bottom: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.login-icon{
+    /* margin-bottom: 80px; */
+    margin-top: 15%;
+}
+
+.login-arcane h1{
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 10%;
+    margin-bottom: 15%;
+}
+
+.login-username-label, .login-pass-label{
+    text-align: start;
+    width: 80%;
+    margin-bottom: 2%;
+}
+
+.login-pass-label{
+    margin-top: 2%;
+}
+
+.login-button{
+    width: 85%;
+}
+
+.login-button-btn{
+    width: 95%;
+    margin-top: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: #eaeaea;
+    font-size: 15px;
+}
+
+.login-button-btn:hover{
+    color: white;
+    background-color: black;
+    border-color: white;
+}
