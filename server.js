@@ -1,7 +1,17 @@
-const express = require('express');
-const app = express();
-const { chart } = import('chart.js');
-const PORT = 8000;
+const express = require('express'),
+      app = express(),
+      mongoose = request('mongoose'),
+      passport = request('passport'),
+      passport_local = require('passport-local'),
+      body_parser = require('body-parser'),
+      PORT = 8000;
+
+const userRoutes = require('./routes/users'),
+      fileRoutes = require('./routes/files'),
+      indexRoutes = require('./routes/index');
+
+const User = require('./models/user')
+      Files = require('./models/file');
 
 
 app.set("view engine", "ejs");
