@@ -38,6 +38,10 @@ app.get("/login", (req, res)=>{
     res.render('login');
 });
 
+app.use(indexRoutes);
+// app.use(userRoutes);
+// app.use(fileRoutes);
+
 app.listen(PORT || process.env.PORT, process.env.IP,  function(){
     console.log("Arcane server is up on PORT:", PORT)
 });
