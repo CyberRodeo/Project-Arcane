@@ -29,7 +29,7 @@ var data = [
     }
 ]
 
-function seedDB(){
+
     // File.deleteMany({},(err)=>{
     //     if(err){
     //         console.err(err);
@@ -48,25 +48,45 @@ function seedDB(){
     //     });
     // });
 
-    try{
-        File.deleteMany({}, (err) =>{
-            if(err){
-                console.err(err);
-            } else {
-                console.log('db has been seeded!');
-            }
+    // try{
+    //     File.deleteMany({name: "tf bro?", description: "tf bro?"}, (err) =>{
+    //         if(err){
+    //             console.err(err);
+    //         } else {
+    //             console.log('db has been seeded!');
+    //         }
 
-            data.forEach((seed) =>{
-                if(err){
-                    console.err(err);
-                } else {
-                    console.log('file has been addded!');
-                }
-            });
-        });
-    } catch(err){
-        console.log(err);
+    //         data.forEach((seed) =>{
+    //             if(err){
+    //                 console.err(err);
+    //             } else {
+    //                 console.log('file has been addded!');
+    //             }
+    //         });
+    //     });
+    // } catch(err){
+    //     console.log(err);
+    // // }
+    // async function seedDB(){
+    //     const res = await File.remove({}, (err)=>{
+    //         if(err){
+    //             console.log(err);
+    //         } else {
+    //             console.log('db has been seeded!');
+    //         }
+    //     }); 
+    // };
+
+    // seedDB();
+    // try{
+    //     await File.deleteMany();
+    // } catch(err){
+    //     console.log(err);
+    // }
+
+    async function seed(){
+        await File.deleteMany();
     }
-}
+    
 
-module.exports = seedDB;
+// module.exports = seedDB;
