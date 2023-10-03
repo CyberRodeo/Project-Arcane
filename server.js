@@ -13,7 +13,7 @@ const userRoutes = require('./routes/users'),
 const User = require('./models/user')
       Files = require('./models/file');
 
-const seeddb = require('./seedDB');
+const seedDB = require('./seeds');
 
 // mongoose.connect('mongodb+srv://legend:legend1234321@yelpcamp.bp884.mongodb.net/arcane', {
 //     useNewUrlParser: true,

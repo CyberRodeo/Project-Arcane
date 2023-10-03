@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const user = require('./models/user');
-const file = require('./models/file');
+const File = require('./models/file');
 
 var data = [
     {
@@ -30,23 +30,43 @@ var data = [
 ]
 
 function seedDB(){
-    file.remove((err)=>{
-        if(err){
-            console.err(err);
-        } else {
-            console.log('db has beem seeded!')
-        }
+    // File.deleteMany({},(err)=>{
+    //     if(err){
+    //         console.err(err);
+    //     } else {
+    //         console.log('db has beem seeded!')
+    //     }
 
-        data.forEach((seed)=>{
-            file.create(seed, (err, file)=>{
+    //     data.forEach((seed)=>{
+    //         file.create(seed, (err, file)=>{
+    //             if(err){
+    //                 console.err(err);
+    //             } else {
+    //                 console.log('file has been added.')
+    //             }
+    //         });
+    //     });
+    // });
+
+    try{
+        File.deleteMany({}, (err) =>{
+            if(err){
+                console.err(err);
+            } else {
+                console.log('db has been seeded!');
+            }
+
+            data.forEach((seed) =>{
                 if(err){
                     console.err(err);
                 } else {
-                    console.log('file has been added.')
+                    console.log('file has been addded!');
                 }
             });
         });
-    });
+    } catch(err){
+        console.log(err);
+    }
 }
 
 module.exports = seedDB;
