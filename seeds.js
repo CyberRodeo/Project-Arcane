@@ -64,29 +64,27 @@ var data = [
     //             }
     //         });
     //     });
-    // } catch(err){
-    //     console.log(err);
-    // // }
-    // async function seedDB(){
-    //     const res = await File.remove({}, (err)=>{
-    //         if(err){
-    //             console.log(err);
-    //         } else {
-    //             console.log('db has been seeded!');
-    //         }
-    //     }); 
-    // };
 
-    // seedDB();
-    // try{
-    //     await File.deleteMany();
-    // } catch(err){
-    //     console.log(err);
-    // }
 
     async function seed(){
-        await File.deleteMany();
-    }
+        try{
+            await File.deleteMany();
+            console.log('DB has been seeded!');
+            await data.forEach((seed)=>{
+                File.create(seed, (err, File)=>{
+                    if(err){
+                        console.error(err);
+                    } else{
+                        console.log("File has been added!");
+                    }
+                });              
+            });
+        } catch(err){
+            console.log(err);
+        }       
+    };
+
+  
     
 
-// module.exports = seedDB;
+module.exports = seed;
