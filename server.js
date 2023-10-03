@@ -33,23 +33,12 @@ mongoose.connect("mongodb://127.0.0.1:27017/arcane", {
     console.err("ERROR",err.message);
 });
 
-seedDB();
+// seedDB();
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.render('arcane');
-}); 
-
-app.get('/dashboard', (req, res) => {
-    res.render('dashboard');
-});
-
-app.get("/login", (req, res)=>{
-    res.render('login');
-});
 
 app.use(indexRoutes);
 // app.use(userRoutes);

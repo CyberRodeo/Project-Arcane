@@ -10,6 +10,17 @@ router.get('/tfbro', (req, res) => {
     // res.render('arcane')
 });
 
+router.get('/', (req, res) => {
+    res.render('arcane');
+}); 
+
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard');
+});
+
+router.get("/login", (req, res)=>{
+    res.render('login');
+});
 
 
 module.exports = router;
