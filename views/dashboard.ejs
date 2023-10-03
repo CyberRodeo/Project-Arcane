@@ -45,17 +45,19 @@
                 </div>
                 <div class="data-01">
                     <div class="files_tabs"> 
-                        <div class="files">
-                            <div style="display: flex; flex-direction: column;">
-                                <a class="file_name" href="">Arcane.png</a>
-                                <span>a picture of arcane logo</span>
+                        <!-- <%- files.forEach( async function(file){ %> -->
+                            <div class="files">
+                                <div style="display: flex; flex-direction: column;">
+                                    <a class="file_name" href=""><%- files.name %></a>
+                                    <span><%- files.description %></span>
+                                </div>
+                                <div class="file_info">
+                                    <img class="favStar" src="/images/favStar.png" alt="">
+                                    <h5 class="user_file_upload_time">Uploaded 10 hours ago by <a class="upload_lstime" href="/">CyberRodeo</a></h5>
+                                </div>
                             </div>
-                            <div class="file_info">
-                                <img class="favStar" src="/images/favStar.png" alt="">
-                                <h5 class="user_file_upload_time">Uploaded 10 hours ago by <a class="upload_lstime" href="/">CyberRodeo</a></h5>
-                            </div>
-                        </div>
-                        <div class="files">
+                        <!-- <%- }); %> -->
+                        <!-- <div class="files">
                             <div style="display: flex; flex-direction: column;">
                                 <a class="file_name" href="">Dashboard.ejs</a>
                                 <span>Dashboard EJS file of Arcane.</span>
@@ -114,7 +116,7 @@
                                 <img class="favStar" src="/images/favStar.png" alt="">
                                 <h5 class="user_file_upload_time">Uploaded 10 hours ago by <a class="upload_lstime" href="/">CyberRodeo</a></h5>
                             </div>
-                        </div>                
+                        </div>                 -->
                     </div>
                 </div>
             </div>
