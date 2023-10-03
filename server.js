@@ -13,14 +13,27 @@ const userRoutes = require('./routes/users'),
 const User = require('./models/user')
       Files = require('./models/file');
 
-mongoose.connect('mongodb+srv://legend:legend1234321@yelpcamp.bp884.mongodb.net/arcane', {
+const seeddb = require('./seedDB');
+
+// mongoose.connect('mongodb+srv://legend:legend1234321@yelpcamp.bp884.mongodb.net/arcane', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// }).then(() => {
+//     console.log('Connected to Arcane db !')
+// }).catch(err => {
+//     console.err("ERROR", err.message);
+// });
+
+mongoose.connect("mongodb://127.0.0.1:27017/arcane", {
     useNewUrlParser: true,
     useUnifiedTopology: true
-}).then(() => {
-    console.log('Connected to Arcane db !')
+}).then(() =>{
+    console.log('connected to db!');
 }).catch(err => {
-    console.err("ERROR", err.message);
+    console.err("ERROR",err.message);
 });
+
+seedDB();
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
