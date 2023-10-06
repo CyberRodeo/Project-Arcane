@@ -42,7 +42,7 @@ app.use(express.static('public'));
 
 app.use(indexRoutes);
 // app.use(userRoutes);
-// app.use(fileRoutes);
+app.use("/dashboard", fileRoutes);
 
 app.listen(PORT || process.env.PORT, process.env.IP,  function(){
     console.log("Arcane server is up on PORT:", PORT)

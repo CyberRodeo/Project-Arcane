@@ -44,19 +44,19 @@
                     </div>             
                 </div>
                 <div class="data-01">
-                    <div class="files_tabs"> 
-                        <!-- <%- files.forEach( async function(file){ %> -->
+                    <div class="files_tabs">
+                        <% allFiles.forEach(function(file){ %>
                             <div class="files">
                                 <div style="display: flex; flex-direction: column;">
-                                    <a class="file_name" href=""><%- files.name %></a>
-                                    <span><%- files.description %></span>
+                                    <a class="file_name" href=""><%= file.name %></a>
+                                    <span><%= file.description %></span>
                                 </div>
                                 <div class="file_info">
                                     <img class="favStar" src="/images/favStar.png" alt="">
                                     <h5 class="user_file_upload_time">Uploaded 10 hours ago by <a class="upload_lstime" href="/">CyberRodeo</a></h5>
                                 </div>
                             </div>
-                        <!-- <%- }); %> -->
+                        <% }); %>
                         <!-- <div class="files">
                             <div style="display: flex; flex-direction: column;">
                                 <a class="file_name" href="">Dashboard.ejs</a>

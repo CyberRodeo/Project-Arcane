@@ -9,7 +9,7 @@ var data = [
     },
     {
         name: "anchor.png",
-        description: "png filr of the anchor logo"
+        description: "png file of the anchor logo"
     },
     {
         name: "VS Code - Insiders Edition",
@@ -27,7 +27,7 @@ var data = [
         name: "package-lock.json",
         description: "json file for dependencies"
     }
-]
+];
 
     async function seed(){
         try{
