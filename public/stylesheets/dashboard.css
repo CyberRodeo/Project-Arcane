@@ -10,7 +10,7 @@ body{
     /* background-color: black; */
 /* } */
 
-.header{    
+.header{
     display: flex;
     justify-content: center;
     border-bottom: 4px solid #000000;
