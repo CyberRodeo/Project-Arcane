@@ -254,6 +254,10 @@ body{
     margin-bottom: 20px;
 }
 
+.user_name{
+    margin-bottom: 5%;
+}
+
 .user_name h1{
     font-weight: 500;
     margin-bottom: 0px;
