@@ -15,14 +15,6 @@ const User = require('./models/user')
 
 const seedDB = require('./seeds');
 
-// mongoose.connect('mongodb+srv://legend:legend1234321@yelpcamp.bp884.mongodb.net/arcane', {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// }).then(() => {
-//     console.log('Connected to Arcane db !')
-// }).catch(err => {
-//     console.err("ERROR", err.message);
-// });
 
 mongoose.connect("mongodb://127.0.0.1:27017/arcane", {
     useNewUrlParser: true,
