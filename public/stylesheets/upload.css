@@ -82,3 +82,55 @@
     border: 1px solid black;
     border-radius:10px;
 }
+
+.button{
+    width: 90%;
+    margin-top: 3%;
+}
+
+.file-submit{
+    width: 100%;
+    padding: 9px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    transition: .1s;
+}
+
+.file-logo{
+    /* margin-bottom: 10%; */
+    bottom: 30%;
+    position: relative;
+}
+
+.file-submit:hover{
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+.upload-file{
+    border-radius: 10px;
+    width: 55%;
+    height: 80%;
+    text-align: center;
+    color: transparent;
+    /* position: fixed; */
+    position: absolute;
+    z-index: 5;
+    outline: none;
+}
+
+.upload-file::-webkit-file-upload-button{
+    /* border: none;
+    background: transparent;
+    color: white;
+    width: 0;
+    height: 0; */
+    display: none;
+}
+
+.file-text{
+    font-size: 20px;
+}
