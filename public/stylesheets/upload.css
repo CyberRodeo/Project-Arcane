@@ -37,6 +37,7 @@
     height: 80vh;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     border-radius: 1.5%;
     border: 2px dashed black;
@@ -51,8 +52,33 @@
 }
 
 .file{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.file-info{
+    /* margin-top: 10px; */
+    width: 90%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.input-name, .input-description{
+    outline: none;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.file-input{
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius:10px;
 }
