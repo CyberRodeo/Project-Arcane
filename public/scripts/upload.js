@@ -1,16 +1,14 @@
 const text = document.getElementsByClassName('file-text');
-const inputBtn = document.getElementsByClassName('upload-file');
-const backbtn = document.getElementById('back-link');
-
-// console.log(text, input, backbtn);
+const inp = document.getElementById('file-inp');
 
 
-inputBtn.addEventListener('change', (e) => {
-    alert('hi there!')
-});
+function backpage(){
+    history.back();
+}
 
-backbtn.addEventListener('click', (e) => {
-    alert('the back link was clicked!')
-});
-
-// console.log('this inner text is' + input.innerText);
+function changeText(event){
+    if(event.target.length > 0){
+        const name = inp.files[0].name;
+        text.innerHtml = name;
+    }
+};
