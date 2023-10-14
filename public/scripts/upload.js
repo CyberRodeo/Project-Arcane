@@ -1,4 +1,4 @@
-const text = document.getElementsByClassName('file-text');
+
 const inp = document.getElementById('file-inp');
 
 
@@ -6,9 +6,13 @@ function backpage(){
     history.back();
 }
 
-function changeText(event){
-    if(event.target.length > 0){
-        const name = inp.files[0].name;
-        text.innerHtml = name;
-    }
+function changeText(){
+    if(inp.files.length > 0){
+        var text = document.getElementById('text');
+        // console.log('Logging text' + text);
+        var name = inp.files[0].name;
+        text.innerText = name;
+        // console.log('logging name' + name);
+        // console.log('YO HO HO HO, YO  HO HO HO')
+    }    
 };

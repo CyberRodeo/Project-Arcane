@@ -133,6 +133,11 @@
 
 .file-text{
     font-size: 20px;
+    
+}
+
+.text{
+    cursor: pointer;
 }
 
 .links{
