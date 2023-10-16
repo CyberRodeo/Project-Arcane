@@ -12,4 +12,9 @@ router.get('/', (req, res)=>{
     });
 });
 
+
+router.get('/files/:id', (req, res)=>{
+    res.send('duh');
+});
+
 module.exports = router;

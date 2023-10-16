@@ -15,8 +15,10 @@ const User = require('./models/user')
 
 const seedDB = require('./seeds');
 
+require('dotenv').config();
 
-mongoose.connect("mongodb://127.0.0.1:27017/arcane", {
+
+mongoose.connect(process.env.localDatabase, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() =>{
