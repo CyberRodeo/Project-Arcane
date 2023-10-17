@@ -45,7 +45,7 @@
                         <% allFiles.forEach(function(file){ %>
                             <div class="files">
                                 <div style="display: flex; flex-direction: column;">
-                                    <a class="file_name" href=""><%= file.name %></a>
+                                    <a class="file_name" href="/dashboard/files/<%= file.id %>"><%= file.name %></a>
                                     <span><%= file.description %></span>
                                 </div>
                                 <div class="file_info">

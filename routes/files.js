@@ -17,4 +17,8 @@ router.get('/files/:id', (req, res)=>{
     res.send('duh');
 });
 
+router.get('/files', (req, res)=>{
+    res.render('error404');
+});
+
 module.exports = router;
