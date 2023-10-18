@@ -15,6 +15,8 @@ const User = require('./models/user')
 
 const seedDB = require('./seeds');
 
+const middleware = require('./middleware/index')
+
 require('dotenv').config();
 
 
@@ -37,6 +39,7 @@ app.use(express.static('public'));
 app.use(indexRoutes);
 // app.use(userRoutes);
 app.use("/dashboard", fileRoutes);
+app.use("/user", userRoutes);
 
 app.listen(PORT || process.env.PORT, process.env.IP,  function(){
     console.log("Arcane server is up on PORT:", PORT)
