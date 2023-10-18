@@ -356,3 +356,7 @@ body{
     text-decoration: none;
     color: #000;
 }
+
+.login-username, .login-pass{
+    caret-color: black;
+}
