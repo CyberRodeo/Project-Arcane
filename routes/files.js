@@ -8,7 +8,7 @@ const File = require('../models/file');
 
 router.get('/', (req, res)=>{
     File.find({}).then((allFiles)=>{
-        res.render("dashboard", {allFiles: allFiles});
+        res.render("dashboard/dashboard", {allFiles: allFiles});
     });
 });
 
@@ -18,7 +18,7 @@ router.get('/files/:id', (req, res)=>{
 });
 
 router.get('/files', (req, res)=>{
-    res.render('error404', {Reason: "Whether there is no such file with id or you are on the wrong link"});
+    res.render('errorhandling/error404', {Reason: "Whether there is no such file with id or you are on the wrong link"});
 });
 
 module.exports = router;

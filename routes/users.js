@@ -10,7 +10,7 @@ router.get('/profile', (req, res) => {
 }); 
 
 router.get('/', (req, res) =>{
-    res.render('error404', {Reason: "No users found!"});
+    res.render('errorhandling/error404', {Reason: "No users found!"});
 });
 
 module.exports = router;

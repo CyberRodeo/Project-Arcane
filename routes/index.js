@@ -7,15 +7,15 @@ const File = require('../models/file');
 
 
 router.get('/', (req, res) => {
-    res.render('arcane');
+    res.render('home/arcane');
 }); 
 
 router.get("/login", (req, res)=>{
-    res.render('login');
+    res.render('auths/login');
 });
 
 router.get('/upload', (req, res)=>{
-    res.render('upload');
+    res.render('files/upload');
 });
 
 
