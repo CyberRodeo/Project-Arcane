@@ -32,6 +32,7 @@
 
 .login-username, .login-pass{
     width: 100%;
+    caret-color: black;
     /* height: 200%; */
     /* padding: 12px; */
     padding-top: 10px;
