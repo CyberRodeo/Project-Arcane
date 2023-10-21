@@ -39,3 +39,74 @@
     padding: 1%;
     height: 65vh;
 }
+
+.file-details{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 90%;
+    color: rgba(106, 106, 106, 0.5);
+}
+
+.file-details span{
+    font-size: 120px;
+    font-style: bold;
+}
+
+.file-details-list{
+    margin-left: 2%;
+}
+
+.file-details-list li{
+    list-style: '- ';
+}
+
+.file-controllers{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-buttons{
+    color: black;
+    outline: none;
+    padding: 8px 10px;
+    border: 2px dashed black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.file-buttons:nth-child(1){
+    margin-right: .5%;
+    transition: .2s;
+}
+
+.file-buttons:nth-child(2){
+    transition: .2s;
+    margin-right: .5%;
+}
+
+.file-buttons:nth-child(3){
+    transition: .2s;
+}
+
+.file-buttons:nth-child(2):hover{
+    background-color: rgb(10, 141, 156) !important;
+}
+
+.file-buttons:nth-child(3):hover{
+    background-color: green !important;
+}
+
+.file-buttons:nth-child(1):hover, .file-buttons:nth-child(2):hover, .file-buttons:nth-child(3):hover{
+    color: white;
+    background-color: red;
+    border-color: white ;
+}
+
+
+
+
+
