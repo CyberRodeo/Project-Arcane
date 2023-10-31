@@ -14,7 +14,7 @@ router.get('/', (req, res)=>{
 
 
 router.get('/files/:id', (req, res)=>{
-    res.render('files/files')
+    res.render('files/files');
 });
 
 router.get('/files', (req, res)=>{

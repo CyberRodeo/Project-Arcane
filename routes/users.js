@@ -6,7 +6,7 @@ const middleware = require("../middleware/index");
 const File = require('../models/file');
 
 router.get('/profile', (req, res) => {
-    res.send('Duh')
+    res.render('user/viewProfile');
 }); 
 
 router.get('/', (req, res) =>{
