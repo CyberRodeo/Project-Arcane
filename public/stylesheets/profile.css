@@ -53,10 +53,10 @@
 
 .UserAbout textarea{
     font-size: 1.2rem;
-    width: 60%;
+    width: 75%;
     text-align: center;
     outline: none;
-    margin-top: 5%;
+    margin-top: 2%;
     border-radius: 10px;
     border: 1px solid grey;
     padding: 1.5%;
@@ -64,4 +64,27 @@
     overflow-y: auto;
     overflow-x: none;
     max-height: 10vh;
+}
+
+.UserBtnSub{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.UserBtnSub button{
+    padding: 2% 2%;
+    width: 75%;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+    color: black;
+    background-color: white;
+    font-size: 1.1rem;
+    transition: .2s;
+}
+
+.UserBtnSub button:hover{
+    background-color: black;
+    color: white;
 }
