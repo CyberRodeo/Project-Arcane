@@ -23,12 +23,14 @@ router.get("/login", middlewareobj.isloggedin, (req, res)=>{
     res.render('auths/login');
 });
 
-router.get('/upload', (req, res)=>{
+router.get('/upload', middlewareobj.isloggedin, (req, res)=>{
     res.render('files/upload');
 });
 
+console.log(process.env.user, process.env.password);
+
 router.post('/login', (req, res)=>{
-    if(req.body.username == process.env.username && req.body.password == process.env.password){
+    if(req.body.username == process.env.user && req.body.password == process.env.password){
         process.env.isLoggedin = 'true';
         res.redirect('/dashboard');
         console.log('User Verified!')

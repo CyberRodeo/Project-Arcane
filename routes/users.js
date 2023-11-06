@@ -4,8 +4,10 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const middleware = require("../middleware/index");
 const File = require('../models/file');
+const middlewareobj = require("../middleware/index");
 
-router.get('/profile', (req, res) => {
+
+router.get('/profile', middlewareobj.isloggedin, (req, res) => {
     res.render('user/viewProfile');
 }); 
 

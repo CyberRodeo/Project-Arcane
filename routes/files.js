@@ -15,7 +15,7 @@ router.get('/', middlewareobj.authMiddleware, (req, res)=>{
 });
 
 
-router.get('/files/:id', (req, res)=>{
+router.get('/files/:id', middlewareobj.authMiddleware, (req, res)=>{
     res.render('files/files');
 });
 
