@@ -14,7 +14,7 @@
 </head>
 <body>
    <div class="login-page">
-        <div class="login-form">
+        <form class="login-form" action="/login" method="post">
             <div class="login-icon">
                 <img src="/icons/anchor-white.png" alt="">
             </div>
@@ -23,19 +23,19 @@
             </div>
             <div class="login-inputs">
                 <div class="login-username-input">
-                    <input type="text" class="login-username" placeholder="User ID">
+                    <input type="text" class="login-username" name="username" placeholder="User ID">
                 </div>
                 <hr class="login-line">
                 <div class="login-pass-input">
-                    <input type="password" class="login-pass" placeholder="Password">
+                    <input type="password" class="login-pass" name="password" placeholder="Password">
                 </div>
             </div>
             <div class="login-button">
-                <button class="login-button-btn">
+                <button class="login-button-btn" type="submit">
                     Login
                 </button>
             </div>
-        </div>
+        </form>
         <div class="link">
             <a href="/" class="links">Home</a>
             <a href="/dashboard" class="links">Dashboard</a>

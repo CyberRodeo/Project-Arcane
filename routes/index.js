@@ -5,6 +5,12 @@ const passport = require('passport');
 const User = require('../models/user');
 const File = require('../models/file');
 
+const bodyParser = require('body-parser');
+router.use(bodyParser.urlencoded({extended : true}));
+
+
+require('dotenv').config();
+
 
 router.get('/', (req, res) => {
     res.render('home/arcane');
@@ -16,6 +22,18 @@ router.get("/login", (req, res)=>{
 
 router.get('/upload', (req, res)=>{
     res.render('files/upload');
+});
+
+router.post('/login', (req, res)=>{
+    if(req.body.username == process.env.username && req.body.password == process.env.password){
+        process.env.isLoggedin = 'true';
+        res.redirect('/dashboard');
+        console.log('User Verified!')
+        console.log(process.env.isLoggedin);
+    } else {
+        res.redirect('/login');
+        console.log('The username or the password is incorrect!')
+    }
 });
 
 
