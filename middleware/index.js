@@ -14,11 +14,12 @@ middlewareobj.authMiddleware = function(req, res, next){
 }
 
 
-middlewareobj.loggedin = function(req, res, next){
+middlewareobj.isloggedin = function(req, res, next){
     if(process.env.isLoggedin == 'true'){
-        next();
+        res.redirect('/dashboard');
     } else {
         next();
     }
 };
+
 module.exports = middlewareobj;

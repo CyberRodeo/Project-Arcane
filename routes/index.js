@@ -8,6 +8,9 @@ const File = require('../models/file');
 const bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({extended : true}));
 
+const middlewareobj = require("../middleware/index");
+
+
 
 require('dotenv').config();
 
@@ -16,7 +19,7 @@ router.get('/', (req, res) => {
     res.render('home/arcane');
 }); 
 
-router.get("/login", (req, res)=>{
+router.get("/login", middlewareobj.isloggedin, (req, res)=>{
     res.render('auths/login');
 });
 
@@ -29,7 +32,7 @@ router.post('/login', (req, res)=>{
         process.env.isLoggedin = 'true';
         res.redirect('/dashboard');
         console.log('User Verified!')
-        console.log(process.env.isLoggedin);
+        // console.log(process.env.isLoggedin);
     } else {
         res.redirect('/login');
         console.log('The username or the password is incorrect!')
