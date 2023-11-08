@@ -19,11 +19,11 @@ router.get('/', (req, res) => {
     res.render('home/arcane');
 }); 
 
-router.get("/login", middlewareobj.isloggedin, (req, res)=>{
+router.get("/login", (req, res)=>{
     res.render('auths/login');
 });
 
-router.get('/upload', middlewareobj.isloggedin, (req, res)=>{
+router.get('/upload',  (req, res)=>{
     res.render('files/upload');
 });
 
