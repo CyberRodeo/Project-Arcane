@@ -22,4 +22,28 @@ middlewareobj.isloggedin = function(req, res, next){
     }
 };
 
+middlewareobj.userLogged = function(req, res, next){
+    if(process.env.isloggedin == 'true'){
+        next();
+    } else {
+        res.redirect('/');
+    }
+};
+
+middlewareobj.loginMidwre = function(req, res, next){
+    if(process.env.isloggedin == 'true'){
+        res.redirect('/dashboard');
+    } else {
+        next();
+    }
+};
+
+middlewareobj.upldMidwre = function(req, res, next){
+    if(process.env.isloggedin == 'false'){
+        res.redirect('/login');
+    } else {
+        next();
+    }
+};
+
 module.exports = middlewareobj;

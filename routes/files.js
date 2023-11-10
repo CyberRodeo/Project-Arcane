@@ -4,18 +4,17 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const middleware = require("../middleware/index");
 const File = require('../models/file');
-const middlewareobj = require("../middleware/index");
 
 
 
-router.get('/', middlewareobj.authMiddleware, (req, res)=>{
+router.get('/', middleware.userLogged, (req, res)=>{
     File.find({}).then((allFiles)=>{
         res.render("dashboard/dashboard", {allFiles: allFiles});
     });
 });
 
 
-router.get('/files/:id', middlewareobj.authMiddleware, (req, res)=>{
+router.get('/files/:id', middleware.authMiddleware, (req, res)=>{
     res.render('files/files');
 });
 

@@ -8,7 +8,7 @@ const File = require('../models/file');
 const bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({extended : true}));
 
-const middlewareobj = require("../middleware/index");
+const middleware = require("../middleware/index");
 
 
 
@@ -19,11 +19,11 @@ router.get('/', (req, res) => {
     res.render('home/arcane');
 }); 
 
-router.get("/login", (req, res)=>{
+router.get("/login", middleware.loginMidwre, (req, res)=>{
     res.render('auths/login');
 });
 
-router.get('/upload',  (req, res)=>{
+router.get('/upload', middleware.upldMidwre,  (req, res)=>{
     res.render('files/upload');
 });
 
