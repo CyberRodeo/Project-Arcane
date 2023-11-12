@@ -42,4 +42,10 @@ router.post('/login', (req, res)=>{
 });
 
 
+router.get('/logout', middleware.logoutmidwre, (req, res)=>{
+    process.env.isLoggedin = 'false';
+    console.log('User has been successfully logged out!');
+    res.redirect('/login');
+});
+
 module.exports = router;

@@ -39,4 +39,13 @@ middlewareobj.upldMidwre = function(req, res, next){
     }
 };
 
+middlewareobj.logoutmidwre = function(req, res, next){
+    if(process.env.isLoggedin == 'false'){
+        res.redirect('login');
+        console.error('No User session detected, redirected to login page.')
+    } else {
+        next();
+    }
+};
+
 module.exports = middlewareobj;
