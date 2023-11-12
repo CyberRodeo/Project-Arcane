@@ -19,7 +19,7 @@ router.get('/', (req, res) => {
     res.render('home/arcane');
 }); 
 
-router.get("/login", middleware.loginMidwre, (req, res)=>{
+router.get("/login", middleware.isloggedin, (req, res)=>{
     res.render('auths/login');
 });
 

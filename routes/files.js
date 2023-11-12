@@ -13,11 +13,6 @@ router.get('/', middleware.userLogged, (req, res)=>{
     });
 });
 
-
-router.get('/files/:id', middleware.authMiddleware, (req, res)=>{
-    res.render('files/files');
-});
-
 router.get('/files', (req, res)=>{
     res.render('errorhandling/error404', {Reason: "Whether there is no such file with id or you are on the wrong link"});
 });
