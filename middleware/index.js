@@ -30,13 +30,6 @@ middlewareobj.userLogged = function(req, res, next){
     }
 };
 
-middlewareobj.loginMidwre = function(req, res, next){
-    if(process.env.isloggedin == 'true'){
-        res.redirect('/dashboard');
-    } else {
-        next();
-    }
-};
 
 middlewareobj.upldMidwre = function(req, res, next){
     if(process.env.isloggedin == 'false'){
