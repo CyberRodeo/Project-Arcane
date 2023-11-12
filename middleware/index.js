@@ -26,7 +26,7 @@ middlewareobj.userLogged = function(req, res, next){
     if(process.env.isloggedin == 'true'){
         next();
     } else {
-        res.redirect('/');
+        res.redirect('/login');
     }
 };
 

@@ -362,3 +362,12 @@ body{
 .login-username, .login-pass{
     caret-color: black;
 }
+
+.logout-btn{
+    background-color: transparent;
+    border: none;
+    padding: none;
+    margin: 0 19px;
+    cursor: pointer;
+    font-size: 17px;
+}
