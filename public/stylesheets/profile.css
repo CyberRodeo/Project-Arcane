@@ -88,3 +88,21 @@
     background-color: black;
     color: white;
 }
+
+.headerTxt{
+    font-style: 20px;
+    font-weight: 300;
+    margin-bottom: 5%;
+}
+
+.headerTxt:hover{
+    text-decoration: underlines;
+}
+
+.profPic{
+    transition: .2s;
+}
+
+.profPic:hover{
+    filter: blur(2px);
+}
