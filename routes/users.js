@@ -15,10 +15,5 @@ router.get('/', (req, res) =>{
     res.render('errorhandling/error404', {Reason: "No users found!"});
 });
 
-router.get('/logout', (req, res)=>{
-    process.env.isLoggedin = 'false';
-    console.log('User has been successfully logged out!');
-    res.redirect('/login');
-});
 
 module.exports = router;

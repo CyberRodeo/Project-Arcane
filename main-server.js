@@ -24,7 +24,7 @@ mongoose.connect(process.env.localDatabase, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() =>{
-    console.log('connected to db!');
+    console.log('Arcane DB has been connected successfully!');
 }).catch(err => {
     console.err("ERROR",err.message);
 });
