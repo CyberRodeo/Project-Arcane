@@ -27,13 +27,13 @@ router.get('/upload', middleware.upldMidwre,  (req, res)=>{
     res.render('files/upload');
 });
 
-console.log(process.env.user, process.env.password);
+console.log("user: " + process.env.user, "pass: " + process.env.password);
 
 router.post('/login', (req, res)=>{
     if(req.body.username == process.env.user && req.body.password == process.env.password){
         process.env.isLoggedin = 'true';
         res.redirect('/dashboard');
-        console.log('User Verified!')
+        console.log('User has been verified!')
         // console.log(process.env.isLoggedin);
     } else {
         res.redirect('/login');
