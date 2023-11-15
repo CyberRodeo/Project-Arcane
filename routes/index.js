@@ -27,20 +27,29 @@ router.get('/upload', middleware.upldMidwre,  (req, res)=>{
     res.render('files/upload');
 });
 
-console.log("user: " + process.env.user, "pass: " + process.env.password);
+// router.post('/login', (req, res)=>{
+//     if(req.body.username == process.env.user && req.body.password == process.env.password){
+//         process.env.isLoggedin = 'true';
+//         res.redirect('/dashboard');
+//         console.log('User has been verified!')
+//         // console.log(process.env.isLoggedin);
+//     } else {
+//         res.redirect('/login');
+//         console.log('The username or the password is incorrect!')
+//     }
+// });
 
-router.post('/login', (req, res)=>{
-    if(req.body.username == process.env.user && req.body.password == process.env.password){
-        process.env.isLoggedin = 'true';
-        res.redirect('/dashboard');
-        console.log('User has been verified!')
-        // console.log(process.env.isLoggedin);
-    } else {
-        res.redirect('/login');
-        console.log('The username or the password is incorrect!')
-    }
+router.post('/login', (req, res, next)=>{
+    User.find({username: req.body.username}).then((foundUser)=>{
+        if(foundUser[0].pass == req.body.password){
+            process.env.isLoggedin = 'true';
+            res.redirect('/dashboard');
+        } else {
+            console.log('Entered Password is incorrect!');
+            res.redirect('/login');
+        }
+    });
 });
-
 
 router.get('/logout', middleware.logoutmidwre, (req, res)=>{
     process.env.isLoggedin = 'false';
