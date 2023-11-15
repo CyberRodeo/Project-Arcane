@@ -15,6 +15,17 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "ejs": "^3.1.9"
-  }
+    "dot-env": "^0.0.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyberRodeo/Project-Arcane.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CyberRodeo/Project-Arcane/issues"
+  },
+  "homepage": "https://github.com/CyberRodeo/Project-Arcane#readme"
 }
