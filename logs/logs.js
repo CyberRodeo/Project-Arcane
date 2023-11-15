@@ -1,11 +1,12 @@
 const fs = require('fs');
 const util = require('util');
-var currentdate = new Date();
+
 
 var log_file = fs.WriteStream('debug.log');
 var log_stdout = process.stdout;
 
 var log = function(...d){
+    var currentdate = new Date();
     var datetime = currentdate.getDate()
     + "/"
     + (currentdate.getMonth()+1)

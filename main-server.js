@@ -26,13 +26,13 @@ mongoose.connect(process.env.localDatabase, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() =>{
-    console.log('Arcane DB has been connected successfully!');
+    logger('Arcane DB has been connected successfully!');
 }).catch(err => {
     console.err("ERROR",err.message);
 });
 
 // seedDB();
-logger('i love this database');
+logger('i love computers');
 // seedDB.seedUser();
 
 app.set("view engine", "ejs");
@@ -46,5 +46,5 @@ app.use("/user", userRoutes);
 
 
 app.listen(PORT || process.env.PORT, process.env.IP,  function(){
-    console.log("Arcane server is up on PORT:", PORT)
+    logger("Arcane server is up on PORT:", PORT)
 });

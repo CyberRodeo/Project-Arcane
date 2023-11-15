@@ -42,12 +42,18 @@ router.get('/upload', middleware.upldMidwre,  (req, res)=>{
 
 router.post('/login', (req, res, next)=>{
     User.find({username: req.body.username}).then((foundUser)=>{
-        if(foundUser[0].pass == req.body.password){
-            process.env.isLoggedin = 'true';
-            res.redirect('/dashboard');
+        if(foundUser.length != 0){
+            console.log(foundUser);
+            if(foundUser[0].pass == req.body.password){
+                process.env.isLoggedin = 'true';
+                res.redirect('/dashboard');
+                logger('User has been verified!');
+            } else {
+                logger('User has not been verified! [wrong credentials]');
+            }
         } else {
-            logger('Entered Password is incorrect!');
             res.redirect('/login');
+            logger('No User with the given arguement found.')
         }
     });
 });
