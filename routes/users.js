@@ -9,7 +9,7 @@ const logger = require('../logs/logs');
 require('dotenv').config();
 
 router.get('/profile', middlewareobj.userLogged, (req, res) => {
-    res.render('user/viewProfile');
+    res.render('user/editProfile');
 }); 
 
 router.get('/', (req, res) =>{
