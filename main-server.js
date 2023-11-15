@@ -15,7 +15,9 @@ const User = require('./models/user')
 
 const seedDB = require('./seeds');
 
-const middleware = require('./middleware/index')
+const middleware = require('./middleware/index');
+
+const logger = require('./logs/logs');
 
 require('dotenv').config();
 
@@ -30,6 +32,7 @@ mongoose.connect(process.env.localDatabase, {
 });
 
 // seedDB();
+logger('i love this database');
 // seedDB.seedUser();
 
 app.set("view engine", "ejs");
@@ -38,7 +41,6 @@ app.use(express.static('public'));
 
 
 app.use(indexRoutes);
-// app.use(userRoutes);
 app.use("/dashboard", fileRoutes);
 app.use("/user", userRoutes);
 

@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({extended : true}));
 
 const middleware = require("../middleware/index");
+const logger = require('../logs/logs');
 
 
 
@@ -31,11 +32,11 @@ router.get('/upload', middleware.upldMidwre,  (req, res)=>{
 //     if(req.body.username == process.env.user && req.body.password == process.env.password){
 //         process.env.isLoggedin = 'true';
 //         res.redirect('/dashboard');
-//         console.log('User has been verified!')
-//         // console.log(process.env.isLoggedin);
+//         logger('User has been verified!')
+//         // logger(process.env.isLoggedin);
 //     } else {
 //         res.redirect('/login');
-//         console.log('The username or the password is incorrect!')
+//         logger('The username or the password is incorrect!')
 //     }
 // });
 
@@ -45,7 +46,7 @@ router.post('/login', (req, res, next)=>{
             process.env.isLoggedin = 'true';
             res.redirect('/dashboard');
         } else {
-            console.log('Entered Password is incorrect!');
+            logger('Entered Password is incorrect!');
             res.redirect('/login');
         }
     });
@@ -53,7 +54,7 @@ router.post('/login', (req, res, next)=>{
 
 router.get('/logout', middleware.logoutmidwre, (req, res)=>{
     process.env.isLoggedin = 'false';
-    console.log('User has been successfully logged out!');
+    logger('User has been successfully logged out!');
     res.redirect('/login');
 });
 

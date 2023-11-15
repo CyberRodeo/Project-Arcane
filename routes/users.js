@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const File = require('../models/file');
 const middlewareobj = require("../middleware/index");
+const logger = require('../logs/logs');
 
 require('dotenv').config();
 
