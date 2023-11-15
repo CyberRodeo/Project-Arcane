@@ -49,6 +49,7 @@ router.post('/login', (req, res, next)=>{
                 res.redirect('/dashboard');
                 logger('User has been verified!');
             } else {
+                res.redirect('/login');
                 logger('User has not been verified! [wrong credentials]');
             }
         } else {

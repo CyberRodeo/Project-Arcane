@@ -23,8 +23,6 @@ require('dotenv').config();
 
 
 mongoose.connect(process.env.localDatabase, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
 }).then(() =>{
     logger('Arcane DB has been connected successfully!');
 }).catch(err => {
@@ -32,7 +30,7 @@ mongoose.connect(process.env.localDatabase, {
 });
 
 // seedDB();
-logger('i love computers');
+logger('I Love Computers - CyberRodeo');
 // seedDB.seedUser();
 
 app.set("view engine", "ejs");
