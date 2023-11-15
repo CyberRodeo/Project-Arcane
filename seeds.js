@@ -29,23 +29,51 @@ var data = [
     }
 ];
 
-    async function seed(){
-        try{
-            await File.deleteMany();
-            console.log('DB has been seeded!');
-            await File.create(data).then((err)=>{
-                if(err){
-                    console.log(err);
-                } else {
-                    console.log('File has been created!')
-                }
-            });
-        } catch(err){
-            console.log(err);
-        }       
-    };
+var seedObj = {};
+
+var User = [
+    {
+        name: "Harry",
+        username: "cyberrodeo",
+        pass: "iamnobody467",
+        aboutme: "i am nobody!",
+        pfp: "https://th.bing.com/th/id/OIP.0syNPGI4n2hFKnWmWltTJwHaHa?pid=ImgDet&rs=1"
+    }
+]
+    
+
+
+seedObj.seed = async function(){
+    try{
+        await File.deleteMany();
+        console.log('DB has been seeded!');
+        await File.create(data).then((err)=>{
+            if(err){
+                console.log(err);
+            } else {
+                console.log('File has been created!')
+            }
+        });
+    } catch(err){
+        console.log(err);
+    }  
+};
+
+seedObj.seedUser = async function(){
+    try{
+        await user.create(User).then((err)=>{
+            if(err){
+                console.log(err);
+            } else {
+                console.log('user has been added!')
+            }
+        });
+    } catch(err){
+        console.log(err);
+    }  
+};
 
   
     
 
-module.exports = seed;
+module.exports = seedObj;
