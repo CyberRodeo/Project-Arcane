@@ -46,8 +46,10 @@ router.post('/login', (req, res, next)=>{
             console.log(foundUser);
             if(foundUser[0].pass == req.body.password){
                 process.env.isLoggedin = 'true';
+                process.env.userSession = foundUser[0];
                 res.redirect('/dashboard');
                 logger('User has been verified!');
+                console.log(process.env.userSession);
             } else {
                 res.redirect('/login');
                 logger('User has not been verified! [wrong credentials]');
