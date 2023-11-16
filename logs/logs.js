@@ -2,7 +2,7 @@ const fs = require('fs');
 const util = require('util');
 
 
-var log_file = fs.WriteStream('debug.log');
+var log_file = fs.WriteStream('server.log');
 var log_stdout = process.stdout;
 
 var log = function(...d){
