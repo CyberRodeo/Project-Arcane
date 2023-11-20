@@ -30,13 +30,13 @@
             <div class="content-01">
                 <div class="chart">
                     <div class="user_pfp">
-                        <img class="" src="/images/cat.jpeg" alt="">
+                        <img class="" src="<%= activeUser.pfp %>" alt="">
                     </div>
                     <div class="user_name">
-                        <h1>CR</h1>
+                        <h1><%= activeUser.name %></h1>
                     </div>     
                     <div class="user_aboutMe">
-                        just a dude who writes code and plays games...
+                        <%= activeUser.aboutme %>
                         <button onclick="redirect()" class="edit_profile" >Edit Profile</button>
                     </div>             
                 </div>
