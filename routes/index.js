@@ -11,6 +11,8 @@ router.use(bodyParser.urlencoded({extended : true}));
 const middleware = require("../middleware/index");
 const logger = require('../logs/logs');
 
+const usrSession = require("../userSession/session");
+
 
 
 require('dotenv').config();
@@ -46,10 +48,9 @@ router.post('/login', (req, res, next)=>{
             console.log(foundUser);
             if(foundUser[0].pass == req.body.password){
                 process.env.isLoggedin = 'true';
-                process.env.userSession = foundUser[0];
+                usrSession.userSession(foundUser);
                 res.redirect('/dashboard');
                 logger('User has been verified!');
-                console.log(process.env.userSession);
             } else {
                 res.redirect('/login');
                 logger('User has not been verified! [wrong credentials]');

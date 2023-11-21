@@ -4,15 +4,15 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const middleware = require("../middleware/index");
 const File = require('../models/file');
-const logger = require('../logs/logs')
+const logger = require('../logs/logs');
+const usrSession = require("../userSession/session");
 require('dotenv').config();
 
-UserSession = process.env.userSession;
-console.log(UserSession);
 
 
 router.get('/', middleware.userLogged, (req, res)=>{
     File.find({}).then((allFiles)=>{
+        UserSession = usrSession.fetchUserSession();
         res.render("dashboard/dashboard", {allFiles: allFiles, activeUser: UserSession});
     });
 });
