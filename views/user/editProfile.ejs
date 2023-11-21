@@ -19,13 +19,13 @@
             <h1 class="headerTxt">Update your profile:</h1>
             <form action="#">
                 <div class="UserProfilePic">
-                    <img class="profPic" src="/images/cat.jpeg" alt="">
+                    <img class="profPic" src="<%= userSession.pfp %>" alt="">
                 </div>
                 <div class="UserName">
-                    <input type="text" placeholder="CyberRodeo">
+                    <input type="text" placeholder="<%= userSession.name %>">
                 </div>
                 <div class="UserAbout">
-                    <textarea type="text" placeholder="How are womens allowed to drive?"></textarea>
+                    <textarea type="text" placeholder="<%= userSession.abtme %>"></textarea>
                 </div>
                 <div class="UserBtnSub">
                     <button type="submit">Update Profile</button>
