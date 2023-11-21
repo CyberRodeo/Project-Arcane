@@ -18,7 +18,7 @@ session.fetchUserSession = function(){
         username: process.env.userUsrname
     }
 
-    logger("User session active!");
+    logger("User session fetched!");
     return userSession;
 };  
 
