@@ -18,5 +18,11 @@ router.get('/', (req, res) =>{
     res.render('errorhandling/error404', {Reason: "No users found!"});
 });
 
+router.post("/updateuser", (req, res, next) => {
+    res.redirect('/success')
+});
 
+router.get("/success", (req, res, next)=>{
+    res.send('HII')
+});
 module.exports = router;
