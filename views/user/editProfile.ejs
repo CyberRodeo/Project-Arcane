@@ -17,15 +17,15 @@
     <div class="content">
         <div class="profile">
             <h1 class="headerTxt">Update your profile:</h1>
-            <form action="/updateuser" method="POST">
+            <form action="/user/profile" method="POST">
                 <div class="UserProfilePic">
                     <img class="profPic" src="<%= userSession.pfp %>" alt="">
                 </div>
                 <div class="UserName">
-                    <input type="text" placeholder="<%= userSession.name %>" required>
+                    <input type="text" placeholder="<%= userSession.name %>" name="name" required>
                 </div>
                 <div class="UserAbout">
-                    <textarea type="text" placeholder="<%= userSession.abtme %>" required></textarea>
+                    <textarea type="text" placeholder="<%= userSession.abtme %>" name="abtme" required></textarea>
                 </div>
                 <div class="UserBtnSub">
                     <button type="submit">Update Profile</button>

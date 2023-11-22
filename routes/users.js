@@ -1,5 +1,5 @@
 const express = require('express');
-const user = require('./users');
+const user = require('../models/user');
 const mongoose = require('mongoose');
 const router = express.Router();
 const File = require('../models/file');
@@ -18,11 +18,17 @@ router.get('/', (req, res) =>{
     res.render('errorhandling/error404', {Reason: "No users found!"});
 });
 
-router.post("/updateuser", (req, res, next) => {
-    res.redirect('/success')
+router.post("/profile", (req, res, next) => {
+    currentUser = usrSession.fetchUserSession();
+    
+    let query = {name: currentUser.name}; 
+    let update = {name: req.body.name};
+
+    user.findOneAndUpdate(query, update, {new: true}).then(()=>{
+        logger("user has been updated!");
+        res.redirect('/logout');
+    });
 });
 
-router.get("/success", (req, res, next)=>{
-    res.send('HII')
-});
+
 module.exports = router;
