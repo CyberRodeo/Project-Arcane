@@ -21,8 +21,13 @@ router.get('/', (req, res) =>{
 router.post("/profile", (req, res, next) => {
     currentUser = usrSession.fetchUserSession();
     
-    let query = {name: currentUser.name}; 
-    let update = {name: req.body.name};
+    let query = {
+        name: currentUser.name
+    }; 
+    let update = {
+        name: req.body.name,
+        aboutme: req.body.abtme
+    };
 
     user.findOneAndUpdate(query, update, {new: true}).then(()=>{
         logger("user has been updated!");
