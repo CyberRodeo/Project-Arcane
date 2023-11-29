@@ -30,18 +30,6 @@ router.get('/upload', middleware.upldMidwre,  (req, res)=>{
     res.render('files/upload');
 });
 
-// router.post('/login', (req, res)=>{
-//     if(req.body.username == process.env.user && req.body.password == process.env.password){
-//         process.env.isLoggedin = 'true';
-//         res.redirect('/dashboard');
-//         logger('User has been verified!')
-//         // logger(process.env.isLoggedin);
-//     } else {
-//         res.redirect('/login');
-//         logger('The username or the password is incorrect!')
-//     }
-// });
-
 router.post('/login', (req, res, next)=>{
     User.find({username: req.body.username}).then((foundUser)=>{
         if(foundUser.length != 0){
