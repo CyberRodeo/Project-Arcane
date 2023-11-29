@@ -1,7 +1,7 @@
 require('dotenv').config();
 const logger = require("../logs/logs");
 
-var session = {}
+var session = {};
 
 session.userSession = function(obj){
     process.env.userName = obj[0].name;
