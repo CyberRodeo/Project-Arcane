@@ -267,6 +267,7 @@ body{
 }
 
 .user_aboutMe{
+    text-align: center;
     display: flex;
     flex-direction: column;
 }
