@@ -21,6 +21,14 @@ const logger = require('./logs/logs');
 
 const multer = require('multer');
 
+const cloudinary = require('cloudinary');
+          
+cloudinary.config({ 
+  cloud_name: process.env.cloudname, 
+  api_key: process.env.apikey, 
+  api_secret: process.env.apisecret 
+});
+
 require('dotenv').config();
 
 
