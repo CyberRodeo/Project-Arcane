@@ -19,6 +19,8 @@ const middleware = require('./middleware/index');
 
 const logger = require('./logs/logs');
 
+const multer = require('multer');
+
 require('dotenv').config();
 
 
