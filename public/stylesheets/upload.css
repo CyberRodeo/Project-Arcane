@@ -99,6 +99,13 @@
     transition: .1s;
 }
 
+#uploadForm{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
 .file-logo{
     /* margin-bottom: 10%; */
     bottom: 30%;
