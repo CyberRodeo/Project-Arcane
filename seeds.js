@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
-const user = require('./models/user');
-const File = require('./models/file');
+const   mongoose = require('mongoose'),
+        user = require('./models/user'),
+        File = require('./models/file');
 
 var data = [
     {
