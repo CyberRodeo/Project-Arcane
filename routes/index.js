@@ -1,22 +1,16 @@
-const express = require('express');
-const router = express.Router();
-const passport = require('passport');
+const   express = require('express'),
+        router = express.Router(),
+        passport = require('passport'),
+        User = require('../models/user'),
+        File = require('../models/file'),
+        bodyParser = require('body-parser'),
+        middleware = require("../middleware/index"),
+        logger = require('../logs/logs'),
+        usrSession = require("../userSession/session");
 
-const User = require('../models/user');
-const File = require('../models/file');
-
-const bodyParser = require('body-parser');
 router.use(bodyParser.urlencoded({extended : true}));
 
-const middleware = require("../middleware/index");
-const logger = require('../logs/logs');
-
-const usrSession = require("../userSession/session");
-
-
-
 require('dotenv').config();
-
 
 router.get('/', (req, res) => {
     res.render('home/arcane');
