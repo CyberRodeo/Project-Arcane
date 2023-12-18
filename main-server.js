@@ -4,24 +4,17 @@ const express = require('express'),
       passport = require('passport'),
       passport_local = require('passport-local'),
       body_parser = require('body-parser'),
-      PORT = 8000;
-
-const userRoutes = require('./routes/users'),
+      PORT = 8000,
+      userRoutes = require('./routes/users'),
       fileRoutes = require('./routes/files'),
-      indexRoutes = require('./routes/index');
-
-const User = require('./models/user')
-      Files = require('./models/file');
-
-const seedDB = require('./seeds');
-
-const middleware = require('./middleware/index');
-
-const logger = require('./logs/logs');
-
-const multer = require('multer');
-
-const cloudinary = require('cloudinary');
+      indexRoutes = require('./routes/index'),
+      User = require('./models/user')
+      Files = require('./models/file'),
+      seedDB = require('./seeds'),
+      middleware = require('./middleware/index'),
+      logger = require('./logs/logs'),
+      multer = require('multer'),
+      cloudinary = require('cloudinary');
           
 cloudinary.config({ 
   cloud_name: process.env.cloudname, 
