@@ -1,14 +1,13 @@
-const express = require('express');
-const user = require('./users');
-const mongoose = require('mongoose');
-const router = express.Router();
-const middleware = require("../middleware/index");
-const File = require('../models/file');
-const logger = require('../logs/logs');
-const usrSession = require("../userSession/session");
+const   express = require('express'),
+        user = require('./users'),
+        mongoose = require('mongoose'),
+        router = express.Router();
+        middleware = require("../middleware/index"),
+        File = require('../models/file'),
+        logger = require('../logs/logs'),
+        usrSession = require("../userSession/session");
+
 require('dotenv').config();
-
-
 
 router.get('/', middleware.userLogged, (req, res)=>{
     File.find({}).then((allFiles)=>{
