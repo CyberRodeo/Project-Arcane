@@ -1,11 +1,11 @@
-const express = require('express');
-const user = require('../models/user');
-const mongoose = require('mongoose');
-const router = express.Router();
-const File = require('../models/file');
-const middlewareobj = require("../middleware/index");
-const logger = require('../logs/logs');
-const usrSession = require('../userSession/session');
+const   express = require('express'),
+        user = require('../models/user'),
+        mongoose = require('mongoose'),
+        router = express.Router(),
+        File = require('../models/file'),
+        middlewareobj = require("../middleware/index"),
+        logger = require('../logs/logs'),
+        usrSession = require('../userSession/session');
 
 require('dotenv').config();
 
