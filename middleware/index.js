@@ -1,5 +1,5 @@
-const express = require('express');
-const logger = require('../logs/logs');
+const express = require('express'),
+      logger = require('../logs/logs');
 
 require('dotenv').config();
 
