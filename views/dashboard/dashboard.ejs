@@ -43,14 +43,27 @@
                 <div class="data-01">
                     <div class="files_tabs">
                         <% allFiles.forEach(function(file){ %>
-                            <div class="files">
-                                <div style="display: flex; flex-direction: column;">
-                                    <a class="file_name" href="#"><%= file.name %></a>
-                                    <span><%= file.description %></span>
+                            <div id="files">
+                                <div class="files">
+                                    <div style="display: flex; flex-direction: column;">
+                                        <a class="file_name" href="#"><%= file.name %></a>
+                                        <span><%= file.description %></span>
+                                    </div>
+                                    <div class="file_info">
+                                        <img class="favStar" src="/images/favStar.png" alt="">
+                                        <h5 class="user_file_upload_time">Uploaded by <a class="upload_lstime" href="/user/profile">CyberRodeo</a></h5>
+                                    </div>
                                 </div>
-                                <div class="file_info">
-                                    <img class="favStar" src="/images/favStar.png" alt="">
-                                    <h5 class="user_file_upload_time">Uploaded by <a class="upload_lstime" href="/user/profile">CyberRodeo</a></h5>
+                                <div class="filesActions">
+                                    <span class="download">
+                                        <img src="/icons/download.png" alt="">
+                                    </span>
+                                    <span class="edit">
+                                        <img src="/icons/edit.png" alt="">
+                                    </span>
+                                    <span class="delete">
+                                        <img src="/icons/delete.png" alt="">
+                                    </span>
                                 </div>
                             </div>
                         <% }); %>

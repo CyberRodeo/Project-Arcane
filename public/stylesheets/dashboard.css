@@ -196,8 +196,8 @@ body{
     /* height: 29% !important; */
     align-items: center;
     /* display: flex; */
-    border: 1px solid #bababa;
-    width: 98%;
+    /* border: 1px solid #bababa; */
+    width: 89%;
     /* justify-content: center; */
     align-items: start;
     padding: 15px;
@@ -372,3 +372,30 @@ body{
     cursor: pointer;
     font-size: 17px;
 }
+
+#files{
+    border-top: 1px solid grey;
+    width: 100%;
+    display: flex;
+}
+
+.filesActions{
+    
+justify-content: center;
+    
+display: flex;
+    
+align-items: center;
+}
+
+.filesActions .download img, .edit img, .delete img{
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    transition: .25s;
+    cursor: pointer;
+}
+
+/* .fileActions .edit img:hover, .delete img:hover, .download img:hover{
+    transform: scale(1.2);
+} */
