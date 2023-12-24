@@ -68,6 +68,7 @@ body{
 .link{
     width: 23%;
     display: flex;
+    text-decoration: underline;
 }
 
 
@@ -80,7 +81,7 @@ body{
 .content{
     display: flex;
     flex-direction: column;
-    background-color: #e9ebef;
+    background-color: #ffffff;
     align-items: center;
 }
 
@@ -273,6 +274,7 @@ body{
 }
 
 .edit_profile{
+    background-color: white;
     padding: 6px;
     margin-top: 15px;
     border-radius: 6px;
@@ -331,7 +333,7 @@ body{
 .footerGod{
     justify-content: center;
     display: flex;
-    background-color: #e9ebef;
+    background-color: #fdfeff;
     width: 90%;
     border-top: 1px solid #bababa;
     margin-top: 50px;
@@ -373,7 +375,7 @@ body{
     font-size: 17px;
 }
 
-#files{
+.parentFiles{
     border-top: 1px solid grey;
     width: 100%;
     display: flex;

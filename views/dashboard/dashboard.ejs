@@ -43,7 +43,7 @@
                 <div class="data-01">
                     <div class="files_tabs">
                         <% allFiles.forEach(function(file){ %>
-                            <div id="files">
+                            <div class="parentFiles">
                                 <div class="files">
                                     <div style="display: flex; flex-direction: column;">
                                         <a class="file_name" href="#"><%= file.name %></a>
@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
                                 <div class="filesActions">
-                                    <span class="download">
+                                    <span  id="downloadAction" class="download">
                                         <img src="/icons/download.png" alt="">
                                     </span>
                                     <span class="edit">
