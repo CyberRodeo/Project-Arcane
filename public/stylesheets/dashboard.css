@@ -401,3 +401,11 @@ align-items: center;
 /* .fileActions .edit img:hover, .delete img:hover, .download img:hover{
     transform: scale(1.2);
 } */
+
+.hide{
+    display: none !important;
+}
+
+.show{
+    display: block !important;
+}
