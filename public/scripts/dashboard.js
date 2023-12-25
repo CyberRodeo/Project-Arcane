@@ -24,12 +24,6 @@ for(i=0;i <= files.length; i++){
    });
 }
 
-// function hover(){
-//     files.addEventListener("mouseenter", console.log('Files have been hovered on!'));
-// };
-
-// hover();
-
 
 function redirect(){
     window.location.href = "/user/profile";
