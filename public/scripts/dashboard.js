@@ -9,7 +9,6 @@ for(i = 0; i <= files.length; i++){
     });
 };
 
-
 function redirect(){
     window.location.href = "/user/profile";
 };
