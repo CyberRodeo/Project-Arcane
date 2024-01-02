@@ -1,14 +1,27 @@
-const files = document.getElementsByClassName("files");
-const fileActions = document.getElementsByClassName("actionsBtn");
+const files = document.getElementsByClassName('parentFiles');
+const filesActions = document.getElementsByClassName('filesActions');
 
-console.log(files, fileActions);
+console.log(files[0]);
+const fl = files.length;
+console.log(fl);
 
-for(i = 0; i <= files.length; i++){
-    files[i].addEventListener('mouseenter', ()=>{
-        fileActions[i].classlist.add('hide');
-    });
+function shows(){
+    filesActions.classlist.add('shows');
+    filesActions.classlist.remove('hides');
+    console.log('hovered out!');
 };
 
-function redirect(){
-    window.location.href = "/user/profile";
-};
+function hides(f){
+    filesActions.classlist.add('hides');
+    filesActions.classlist.remove('shows');
+    console.log('hovered in!');
+}
+
+// for(i = 0; i <= fl; i++){
+//     files[i].addEventListener('mouseenter', shows);
+//     files[i].addEventListener('mouseleave', hides);
+// }
+
+
+files.addeventlistener('mouseenter', shows());
+files.addeventlistener('mouseleave', hides());
