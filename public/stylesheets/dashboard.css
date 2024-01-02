@@ -402,10 +402,10 @@ align-items: center;
     transform: scale(1.2);
 } */
 
-.hide{
+.hides{
     display: none !important;
 }
 
-.show{
+.shows{
     display: block !important;
 }
