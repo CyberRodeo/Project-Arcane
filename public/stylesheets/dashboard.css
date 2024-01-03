@@ -382,12 +382,9 @@ body{
 }
 
 .filesActions{
-    
-justify-content: center;
-    
-display: flex;
-    
-align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 
 .filesActions .download img, .edit img, .delete img{
