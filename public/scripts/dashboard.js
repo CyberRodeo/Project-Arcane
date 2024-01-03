@@ -1,26 +1,26 @@
 const files = document.getElementsByClassName('parentFiles');
-const filesActions = document.getElementsByClassName('filesActions');
+const actions = document.getElementsByClassName('download');
 
-console.log(files[0]);
+console.log(actions);
 const fl = files.length;
 console.log(fl);
 
 function shows(){
-    filesActions.classlist.add('shows');
-    filesActions.classlist.remove('hides');
+    actions.classlist.add('shows');
+    actions.classlist.remove('hides');
     console.log('hovered out!');
 };
 
-function hides(f){
-    filesActions.classlist.add('hides');
-    filesActions.classlist.remove('shows');
+function hides(){
+    actions.classlist.add('hides');
+    actions.classlist.remove('shows');
     console.log('hovered in!');
 }
 
-// for(i = 0; i <= fl; i++){
-//     files[i].addEventListener('mouseenter', shows);
-//     files[i].addEventListener('mouseleave', hides);
-// }
+for(i = 0; i <= fl; i++){
+    files[i].addEventListener('mouseenter', shows());
+    files[i].addEventListener('mouseleave', hides());
+}
 
 
 files.addeventlistener('mouseenter', shows());
