@@ -1,27 +1,29 @@
-const files = document.getElementsByClassName('parentFiles');
-const actions = document.getElementsByClassName('download');
+// const parentFiles = document.getElementsByClassName('parentFiles');
+// const downloadBtn = document.getElementsByClassName('filesActions');
 
-console.log(actions);
-const fl = files.length;
-console.log(fl);
+// const files = Array.from(parentFiles);
+// const actions = Array.from(downloadBtn);
 
-function shows(){
-    actions.classlist.add('shows');
-    actions.classlist.remove('hides');
-    console.log('hovered out!');
-};
+// console.log(actions);
+// const fl = files.length;
+// console.log(fl);
 
-function hides(){
-    actions.classlist.add('hides');
-    actions.classlist.remove('shows');
-    console.log('hovered in!');
-}
+// function shows(s){
+//     for(i = 0; i < actions.length; i++){
+//         s[i].classlist.add('shows');
+//         s[i].classlist.remove('hides');
+//     };  
+// };
 
-for(i = 0; i <= fl; i++){
-    files[i].addEventListener('mouseenter', shows());
-    files[i].addEventListener('mouseleave', hides());
-}
+// function hides(h){
+//     for(i = 0; i < actions.length; i++){
+//         h[i].classlist.add('hides');
+//         h[i].classlist.remove('shows');
+//     };
+// };
 
 
-files.addeventlistener('mouseenter', shows());
-files.addeventlistener('mouseleave', hides());
+// for(const Files of files){
+//     Files.addEventListener('mouseenter', shows(actions), false);
+//     Files.addEventListener('mouseleave', hides(actions), false);
+// };
