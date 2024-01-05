@@ -20,4 +20,12 @@ router.get('/files', (req, res)=>{
     res.render('errorhandling/error404', {Reason: "Whether there is no such file with id or you are on the wrong link"});
 });
 
+router.get(':id/edit',(req, res) => {
+    res.send("this is the edit page for file !");
+});
+
+router.get(':id/delete', (req, res)=>{
+    res.send('file deleted!');
+});
+
 module.exports = router;
