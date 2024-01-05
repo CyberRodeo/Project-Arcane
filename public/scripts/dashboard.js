@@ -27,3 +27,15 @@
 //     Files.addEventListener('mouseenter', shows(actions), false);
 //     Files.addEventListener('mouseleave', hides(actions), false);
 // };
+
+function redirect(){
+    window.location.href = "/user/profile";
+};
+
+function editpage(){
+    window.location.href = "/27482390648129074829407/edit"
+}
+
+function deletefile(){
+    window.location.href = "/delete"
+};
