@@ -15,12 +15,6 @@ const express = require('express'),
       logger = require('./logs/logs'),
       multer = require('multer'),
       cloudinary = require('cloudinary');
-          
-cloudinary.config({ 
-  cloud_name: process.env.cloudname, 
-  api_key: process.env.apikey, 
-  api_secret: process.env.apisecret 
-});
 
 require('dotenv').config();
 
@@ -34,7 +28,7 @@ mongoose.connect(process.env.localDatabase, {
 
 // seedDB();
 logger('I Love Computers - CyberRodeo');
-// seedDB.seedUser();
+// seedDB.seed();
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
