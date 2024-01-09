@@ -26,7 +26,7 @@ mongoose.connect(process.env.localDatabase, {
     console.err("ERROR",err.message);
 });
 
-// seedDB();
+
 logger('I Love Computers - CyberRodeo');
 // seedDB.seed();
 
