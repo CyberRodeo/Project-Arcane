@@ -27,7 +27,7 @@ router.get('/upload', middleware.upldMidwre,  (req, res)=>{
 router.post('/login', (req, res, next)=>{
     User.find({username: req.body.username}).then((foundUser)=>{
         if(foundUser.length != 0){
-            console.log(foundUser);
+            // console.log(foundUser);
             if(foundUser[0].pass == req.body.password){
                 process.env.isLoggedin = 'true';
                 usrSession.userSession(foundUser);
