@@ -6,7 +6,8 @@ const express = require('express'),
       body_parser = require('body-parser'),
       PORT = 8000,
       userRoutes = require('./routes/users'),
-      fileRoutes = require('./routes/files'),
+      dashroutes = require('./routes/dashboard'),
+      filesroutes = require('./routes/files'),
       indexRoutes = require('./routes/index'),
       User = require('./models/user')
       Files = require('./models/file'),
@@ -35,8 +36,9 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.static('public'));
 
 app.use(indexRoutes);
-app.use("/dashboard", fileRoutes);
+app.use("/dashboard", dashroutes);
 app.use("/user", userRoutes);
+app.use("/file", filesroutes);
 
 
 app.listen(PORT || process.env.PORT, process.env.IP,  function(){
