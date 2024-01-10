@@ -55,15 +55,15 @@
                                     </div>
                                 </div>
                                 <div class="filesActions">
-                                    <p class="download actionsBtn">
+                                    <a class="download" href="/file/<%= file.id %>/download">
                                         <img src="/icons/download.png" alt="">
-                                    </p>
-                                    <p class="edit actionsBtn" onclick="editpage(<%= file.id %>)">
+                                    </a>
+                                    <a class="edit" href="/file/<%= file.id %>/edit">
                                         <img src="/icons/edit.png" alt="">
-                                    </p>
-                                    <p class="delete actionsBtn" onclick="deletefile()">
+                                    </a>
+                                    <a class="delete" href="/file/<%= file.id %>/delete">
                                         <img src="/icons/delete.png" alt="">
-                                    </p>
+                                    </a>
                                 </div>
                             </div>
                         <% }); %>
