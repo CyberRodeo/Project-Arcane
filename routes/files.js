@@ -10,7 +10,17 @@ const   express = require('express'),
 require('dotenv').config();
 
 router.get('/:id/edit',(req, res) => {
-    res.send("this is the edit page for file !");
+    const id = req.params.id;
+
+    File.find({_id: id}).then((e)=>{
+        var f = e;
+
+        console.log(f);
+    });
+
+    
+    
+    res.render('files/edit');
 });
 
 router.get('/:id/delete', (req, res)=>{
