@@ -11,16 +11,7 @@ require('dotenv').config();
 
 router.get('/:id/edit',(req, res) => {
     const id = req.params.id;
-
-    File.find({_id: id}).then((e)=>{
-        var f = e;
-
-        console.log(f);
-    });
-
-    
-    
-    res.render('files/edit');
+    res.render('files/edit', {file: File.findById(id)});
 });
 
 router.get('/:id/delete', (req, res)=>{
