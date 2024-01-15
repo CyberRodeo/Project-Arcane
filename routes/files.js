@@ -9,9 +9,10 @@ const   express = require('express'),
 
 require('dotenv').config();
 
-router.get('/:id/edit',(req, res) => {
-    const id = req.params.id;
-    res.render('files/edit', {file: File.findById(id)});
+router.get('/:id/edit', async (req, res) => {
+    let id = req.params.id;
+    const fetchedFile = await File.findById(id);
+    res.render('files/edit', {file: fetchedFile});
 });
 
 router.get('/:id/delete', (req, res)=>{
