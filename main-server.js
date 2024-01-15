@@ -14,9 +14,8 @@ const express = require('express'),
       seedDB = require('./seeds'),
       middleware = require('./middleware/index'),
       logger = require('./logs/logs'),
-      multer = require('multer'),
-      cloudinary = require('cloudinary');
-
+      multer = require('multer');
+      
 require('dotenv').config();
 
 
