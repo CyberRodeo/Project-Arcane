@@ -17,9 +17,9 @@
     <div class="content">
         <div class="profile">
             <h1 class="headerTxt">Update the file:</h1>
-            <form action="/user/profile" method="POST">
-                <div class="UserProfilePic">
-                    <img class="profPic" src="" alt="">
+            <form action="/user/profile" method="POST" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+                <div class="UserProfilePic" style="background-color: rgb(221, 221, 221); width: 150px; height: 150px; border-radius: 50%;">
+                    <h1 style="font-size: 100px; font-weight: normal;">A</h1>
                 </div>
                 <div class="UserName">
                     <input type="text" placeholder="<%= file.name %>" name="name" required>
@@ -28,7 +28,7 @@
                     <textarea type="text" placeholder="<%= file.description %>" name="abtme" required></textarea>
                 </div>
                 <div class="UserBtnSub">
-                    <button type="submit">Update File</button>
+                    <button type="submit" style="width: 300px;">Update File</button>
                 </div>
             </form>         
         </div>
