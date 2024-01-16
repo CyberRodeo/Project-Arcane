@@ -25,7 +25,7 @@ router.post('/:id/edit', async (req, res) => {
     let update = {
         name: req.body.name,
         description: req.body.abtme
-    }
+    };
 
     await File.findOneAndUpdate(query, update).then(() => {
         logger("File has been edited!")
