@@ -35,7 +35,15 @@ router.post('/:id/edit', async (req, res) => {
 });
 
 router.get('/:id/delete', (req, res)=>{
-    res.send('file deleted!');
+    let query = {
+        _id : req.params.id
+    };
+
+    File.findByIdAndDelete(query).then(() => {
+        logger('File has been deleted!');
+    });
+
+    res.redirect('/dashboard');
 });
 
 router.get('/:id/download', (req, res)=>{
