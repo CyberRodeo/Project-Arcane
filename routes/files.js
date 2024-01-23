@@ -28,7 +28,7 @@ router.post('/:id/edit', async (req, res) => {
     };
 
     await File.findOneAndUpdate(query, update).then(() => {
-        logger("File has been edited!")
+        logger("File has been edited!");
     });
 
     res.redirect('/dashboard');    
