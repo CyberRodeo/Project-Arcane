@@ -14,7 +14,8 @@ const express = require('express'),
       seedDB = require('./seeds'),
       middleware = require('./middleware/index'),
       logger = require('./logs/logs'),
-      multer = require('multer');
+      multer = require('multer'),
+      gridfs = require('multer-gridfs-storage');
       
 require('dotenv').config();
 
