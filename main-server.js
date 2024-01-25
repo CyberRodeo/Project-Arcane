@@ -19,7 +19,6 @@ const express = require('express'),
       
 require('dotenv').config();
 
-
 mongoose.connect(process.env.localDatabase, {
 }).then(() =>{
     logger('Arcane DB has been connected successfully!');
