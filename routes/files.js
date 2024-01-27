@@ -7,7 +7,8 @@ const   express = require('express'),
         middleware = require("../middleware/index"),
         File = require('../models/file'),
         logger = require('../logs/logs'),
-        usrSession = require("../userSession/session");
+        usrSession = require("../userSession/session")
+        multer = require('multer');
 
 require('dotenv').config();
 
