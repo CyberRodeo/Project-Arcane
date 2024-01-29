@@ -12,6 +12,22 @@ const   express = require('express'),
 
 require('dotenv').config();
 
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, './uploads')
+    },
+    filename: function (req, file, cb) {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
+      cb(null, file.orinignalname + '-' + uniqueSuffix)
+    }
+  })
+  
+  const upload = multer({ storage: storage })
+router.post('/upload', upload.single('file'), (req, res) => {
+    logger('File has been uploaded');
+    res.redirect('/');
+});
+
 router.get('/:id/edit', async (req, res) => {
     let id = req.params.id;
     const fetchedFile = await File.findById(id);
