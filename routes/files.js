@@ -23,9 +23,27 @@ const storage = multer.diskStorage({
     }
   })
   
-const upload = multer({ storage: storage })
+const upload = multer({ storage: storage });
+
 router.post('/upload', upload.single('file'), (req, res) => {
     logger('File has been uploaded');
+    let user = usrSession.fetchUserSession();
+    let data = [
+        {
+            name: req.body.fileName,
+            description: req.body.fileDescription,
+            file: req.file.path,
+            owner: {
+                name: user.name,
+                username: user.username
+            }
+        }
+    ];
+
+    File.create(data).then((err)=> {
+        logger(err);
+    });
+
     res.redirect('/dashboard');
 });
 
