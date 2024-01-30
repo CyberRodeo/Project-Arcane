@@ -17,14 +17,13 @@ const storage = multer.diskStorage({
       cb(null, './uploads')
     },
     filename: function(req, file, cb){
-        cb(null,file.originalname)
+        cb(ull,file.originalname)
     }
   })
   
   const upload = multer({ storage: storage })
 router.post('/upload', upload.single('file'), (req, res) => {
     logger('File has been uploaded');
-    console.log(req.file);
     res.redirect('/');
 });
 
