@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
     }
   })
   
-  const upload = multer({ storage: storage })
+const upload = multer({ storage: storage })
 router.post('/upload', upload.single('file'), (req, res) => {
     logger('File has been uploaded');
     res.redirect('/dashboard');
