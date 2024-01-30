@@ -17,14 +17,16 @@ const storage = multer.diskStorage({
       cb(null, './uploads')
     },
     filename: function(req, file, cb){
-        cb(ull,file.originalname)
+        const dateNow = Date.now();
+        const fileName = `${dateNow} - ${file.originalname}`;
+        cb(null, fileName);
     }
   })
   
   const upload = multer({ storage: storage })
 router.post('/upload', upload.single('file'), (req, res) => {
     logger('File has been uploaded');
-    res.redirect('/');
+    res.redirect('/dashboard');
 });
 
 router.get('/:id/edit', async (req, res) => {
