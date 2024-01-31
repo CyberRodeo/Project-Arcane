@@ -8,7 +8,8 @@ const   express = require('express'),
         File = require('../models/file'),
         logger = require('../logs/logs'),
         usrSession = require("../userSession/session")
-        multer = require('multer');
+        multer = require('multer'),
+        fs = require('fs');
 
 require('dotenv').config();
 
@@ -70,13 +71,18 @@ router.post('/:id/edit', async (req, res) => {
     res.redirect('/dashboard');    
 });
 
-router.get('/:id/delete', (req, res)=>{
+router.get('/:id/delete', async (req, res)=>{
     let query = {
         _id : req.params.id
     };
 
+    const file = await File.findById(req.params.id);
+    const file_path = file.file;
+
+    fs.unlinkSync(file_path)
+
     File.findByIdAndDelete(query).then(() => {
-        logger('File has been deleted!');
+        logger('File object has been removed from the database.');
     });
 
     res.redirect('/dashboard');
