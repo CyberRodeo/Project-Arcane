@@ -9,7 +9,8 @@ const   express = require('express'),
         logger = require('../logs/logs'),
         usrSession = require("../userSession/session")
         multer = require('multer'),
-        fs = require('fs');
+        fs = require('fs'),
+        http = require('https');
 
 require('dotenv').config();
 
@@ -89,7 +90,8 @@ router.get('/:id/delete', async (req, res)=>{
 });
 
 router.get('/:id/download', (req, res)=>{
-    res.send('Your requested file must be downloading rn!');
+    logger('download router was opened!!');
+    res.redirect('dashboard');
 });
 
 
