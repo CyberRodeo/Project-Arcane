@@ -4,9 +4,6 @@ const { GridFsStorage } = require('multer-gridfs-storage');
 const express = require('express'),
       app = express(),
       mongoose = require('mongoose'),
-      passport = require('passport'),
-      passport_local = require('passport-local'),
-      body_parser = require('body-parser'),
       PORT = 3000,
       userRoutes = require('./routes/users'),
       dashroutes = require('./routes/dashboard'),
@@ -17,7 +14,8 @@ const express = require('express'),
       seedDB = require('./seeds'),
       middleware = require('./middleware/index'),
       logger = require('./logs/logs'),
-      multer = require('multer');
+      multer = require('multer'),
+      dld = require('download');
 
       
 require('dotenv').config();
