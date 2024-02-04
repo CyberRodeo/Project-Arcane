@@ -4,6 +4,7 @@ const fileSchema = new mongoose.Schema({
     name: String,
     description: String,
     file: String,
+    filename: String,
     owner: {
         id:{
             type: mongoose.Schema.Types.ObjectId,
