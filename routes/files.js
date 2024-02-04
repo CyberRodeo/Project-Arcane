@@ -1,5 +1,3 @@
-const { findOneAndUpdate } = require('../models/user');
-
 const   express = require('express'),
         user = require('./users'),
         mongoose = require('mongoose'),
@@ -16,7 +14,7 @@ require('dotenv').config();
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, './uploads')
+      cb(null, './uploads/upload')
     },
     filename: function(req, file, cb){
         const dateNow = Date.now();
@@ -35,6 +33,7 @@ router.post('/upload', upload.single('file'), (req, res) => {
             name: req.body.fileName,
             description: req.body.fileDescription,
             file: req.file.path,
+            filename: req.file.filename,
             owner: {
                 name: user.name,
                 username: user.username
@@ -78,9 +77,17 @@ router.get('/:id/delete', async (req, res)=>{
     };
 
     const file = await File.findById(req.params.id);
+    const requestedFile = file.filename;
     const file_path = file.file;
+    const files = fs.readdirSync('./uploads/upload');
 
-    fs.unlinkSync(file_path)
+    if(files.includes(requestedFile)){
+        logger('File was successfully found in the registered directory and now will proceed into removal process.');
+        fs.unlinkSync(file_path);
+        logger('File has been removed successfully.');
+    } else {
+        logger('file was not found at the registered directory!');
+    };
 
     File.findByIdAndDelete(query).then(() => {
         logger('File object has been removed from the database.');
@@ -93,6 +100,5 @@ router.get('/:id/download', (req, res)=>{
     logger('download router was opened!!');
     res.redirect('dashboard');
 });
-
 
 module.exports = router;
