@@ -1,6 +1,4 @@
-
 const inp = document.getElementById('file-inp');
-
 
 function backpage(){
     history.back();
