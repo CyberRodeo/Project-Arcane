@@ -23,6 +23,14 @@ mongoose.connect(process.env.localDatabase, {
     console.err("ERROR",err.message);
 });
 
+var RateLimit = require('express-rate-limit');
+var limiter = RateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100
+});
+
+app.use(limiter);
+
 logger('I Love Computers - CyberRodeo');
 // seedDB.seed();
 
