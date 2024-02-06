@@ -5,7 +5,7 @@ const   express = require('express'),
         File = require('../models/file'),
         bodyParser = require('body-parser'),
         middleware = require("../middleware/index"),
-        logger = require('../logs/logs'),
+        logger = require('../logger/logs'),
         usrSession = require("../userSession/session");
 
 router.use(bodyParser.urlencoded({extended : true}));
