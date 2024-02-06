@@ -1,6 +1,3 @@
-const { GuildDefaultMessageNotifications } = require('discord.js');
-const { GridFsStorage } = require('multer-gridfs-storage');
-
 const express = require('express'),
       app = express(),
       mongoose = require('mongoose'),
@@ -13,11 +10,10 @@ const express = require('express'),
       Files = require('./models/file'),
       seedDB = require('./seeds'),
       middleware = require('./middleware/index'),
-      logger = require('./logs/logs'),
+      logger = require('./logger/logs'),
       multer = require('multer'),
       dld = require('download');
 
-      
 require('dotenv').config();
 
 mongoose.connect(process.env.localDatabase, {
