@@ -1,5 +1,5 @@
 const express = require('express'),
-      logger = require('../logs/logs');
+      logger = require('../logger/logs');
 
 require('dotenv').config();
 
@@ -13,7 +13,6 @@ middlewareobj.authMiddleware = function(req, res, next){
         next();
     }
 }
-
 
 middlewareobj.isloggedin = function(req, res, next){
     if(process.env.isLoggedin == 'true'){
@@ -31,7 +30,6 @@ middlewareobj.userLogged = function(req, res, next){
         res.redirect('/login');
     }
 };
-
 
 middlewareobj.upldMidwre = function(req, res, next){
     if(process.env.isloggedin == 'false'){
