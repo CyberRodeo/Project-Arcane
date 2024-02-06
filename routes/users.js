@@ -4,7 +4,7 @@ const   express = require('express'),
         router = express.Router(),
         File = require('../models/file'),
         middlewareobj = require("../middleware/index"),
-        logger = require('../logs/logs'),
+        logger = require('../logger/logs'),
         usrSession = require('../userSession/session');
 
 require('dotenv').config();
@@ -14,7 +14,7 @@ router.get('/profile', middlewareobj.userLogged, (req, res) => {
     res.render('user/editProfile', {userSession: UserSession});
 }); 
 
-router.get('/', (req, res) =>{
+router.get('/', (req, res) => {
     res.render('errorhandling/error404', {Reason: "No users found!"});
 });
 
@@ -29,7 +29,7 @@ router.post("/profile", (req, res, next) => {
         aboutme: req.body.abtme
     };
 
-    user.findOneAndUpdate(query, update, {new: true}).then(()=>{
+    user.findOneAndUpdate(query, update, {new: true}).then(() => {
         logger("user has been updated!");
         res.redirect('/logout');
     });
