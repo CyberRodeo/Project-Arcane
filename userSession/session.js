@@ -1,5 +1,5 @@
 require('dotenv').config();
-const logger = require("../logs/logs");
+const logger = require("../logger/logs");
 
 var session = {};
 
